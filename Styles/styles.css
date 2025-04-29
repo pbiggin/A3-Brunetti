@@ -1,0 +1,42 @@
+:root {
+
+    /** COLOURS **/ 
+    --dominant-colour : #691A32;
+    --primary-accent-colour : #901A50;
+    --primary-accent-colour : #F1CADE;
+
+    --secondary-colour : #124861;
+    --secondary-accent-colour : #93DACC;
+
+    --background-colour : #F9F0DA;
+    --background-accent : #EBD6A3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-colour);
+
+    /** main text colour **/
+    color: var(--dominant-colour);
+}
+
+.announcement {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 25px;
+
+    background-color: var(--dominant-colour);
+    color: var(--primary-accent-colour);
+}
+
+
+.landing__scroll {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    background-color: var(--secondary-accent-colour);
+    color: var(--secondary-colour);
+}
