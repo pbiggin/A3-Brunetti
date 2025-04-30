@@ -85,6 +85,8 @@ body {
 
 .flower--primary {
   fill: white;
+  margin-bottom: -1px;
+  /**   this margin-top needs to be fixed**/
 }
 
 .flower--flipped {
