@@ -2,7 +2,7 @@
 
     /** COLOURS **/ 
     --dominant-colour : #691A32;
-    --primary-accent-colour : #901A50;
+    --primary-colour : #901A50;
     --primary-accent-colour : #F1CADE;
 
     --secondary-colour : #124861;
@@ -10,6 +10,10 @@
 
     --background-colour : #F9F0DA;
     --background-accent : #EBD6A3;
+
+
+
+    --border-standard : 2px; 
 }
 
 * {
@@ -21,6 +25,26 @@ body {
 
     /** main text colour **/
     color: var(--dominant-colour);
+}
+
+.btn {
+    display: block;
+    padding: 1%;
+    width: 250px; 
+    text-align: center;
+    background-color: white;
+
+    border-style: solid;
+    border-width: var(--border-standard);
+    border-radius: 60px;
+}
+
+.btn--alternate {
+
+ border-style: none;
+ background-color: var(--secondary-colour);
+ color: var(--secondary-accent-colour)
+
 }
 
 .announcement {
@@ -38,16 +62,19 @@ body {
     margin: 0;
 }
 
+
+
 .landing {
+    display: flex;
+    flex-direction: column;
     height: auto;
 }
 
 .landing__hero {
-    height: 80vh;
+    height: 85vh;
 }
 
 .landing__scroll {
-    display: flex;
     flex-direction: row;
     justify-content: space-around;
 
@@ -64,9 +91,71 @@ body {
 
 .flower--primary {
     fill: white;
-    justify-self: flex-end;
+}
+
+.flower--flipped {
+    fill: var(--secondary-colour);
+    transform: rotate(180deg);
+    margin-top: -1px;
+    /**   this margin-top needs to be fixed**/
+}
+
+.flower--accent {
+    fill: var(--primary-accent-colour);
 }
 
 .products {
+    display: grid;
+    padding: 3vh 5vh 3vh 5vh;
     background-color: white;
+}
+
+.products__heading {
+    justify-content: center;
+}
+
+.services {
+    display: grid;
+    background-color: var(--secondary-accent-colour);
+    color: var(--secondary-colour);
+    padding: 5vh;
+}
+
+.services--alternate {
+    background-color: var(--secondary-colour);
+    color: var(--secondary-accent-colour);
+    padding: 5vh;
+}
+
+.locations {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.dfooter { 
+    display: grid;
+    background-color: var(--primary-accent-colour);
+    height: 10vh;
+    padding-top: 5vh;
+}
+
+
+.dfooter__links {
+    background-color: white;
+    border-style: solid none solid none;
+    border-top-color: var(--dominant-colour);
+    border-width: var(--border-standard);
+
+}
+
+.dfooter__credit {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 25px;
+
+    background-color: var(--dominant-colour);
+    color: var(--primary-accent-colour);
 }
