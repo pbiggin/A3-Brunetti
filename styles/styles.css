@@ -24,7 +24,7 @@ body {
   color: var(--dominant-colour);
 }
 
-.btn {
+.standard-btn {
   display: block;
   padding: 1%;
   width: 250px;
@@ -36,7 +36,7 @@ body {
   border-radius: 60px;
 }
 
-.btn--alternate {
+.standard-btn--alternate {
   border-style: none;
   background-color: var(--secondary-colour);
   color: var(--secondary-accent-colour);
