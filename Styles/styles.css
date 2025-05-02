@@ -115,7 +115,7 @@ body {
 }
 
 .landing__hero > .cluster > img {
-  max-height: 20vw;
+  max-height: 150px;
   min-height: 105px;
   height: 15vw;
   padding: 2vh;
@@ -194,10 +194,6 @@ body {
   background-color: var(--secondary-colour);
   color: var(--secondary-accent-colour);
   padding: var(--space-xl);
-}
-
-.services__content {
-  display: grid;
 }
 
 .locations {
