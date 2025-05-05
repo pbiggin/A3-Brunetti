@@ -117,6 +117,7 @@ body {
 .landing__hero > .cluster > img {
   max-height: 150px;
   min-height: 105px;
+  max-width:50%;
   height: 15vw;
   padding: 2vh;
 }
@@ -149,16 +150,17 @@ body {
 .landing__scroll {
   flex-direction: row;
   justify-content: space-around;
-
+  text-transform: uppercase;
   background-color: var(--secondary-accent-colour);
   color: var(--secondary-colour);
   height: auto;
-  padding: 2ch;
+  padding: 1ch;
 }
 
-.about {
+.about, .shop {
   height: 100vh;
 }
+
 
 .flower--primary {
   fill: white;
@@ -177,7 +179,7 @@ body {
   fill: var(--primary-accent-colour);
 }
 
-.products {
+.products, .quote {
   display: grid;
   padding: 3vh 5vh 3vh 5vh;
   background-color: white;
