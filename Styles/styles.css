@@ -45,10 +45,8 @@
   margin: 0;
 }
 
-
 body {
   background-color: var(--background-colour);
-
   /** main text colour **/
   color: var(--dominant-colour);
 }
@@ -117,7 +115,7 @@ body {
 .landing__hero > .cluster > img {
   max-height: 150px;
   min-height: 105px;
-  max-width:50%;
+  max-width: 50%;
   height: 15vw;
   padding: 2vh;
 }
@@ -131,19 +129,14 @@ body {
 }
 
 @media all and (max-width: 600px) {
-  .landing__text {
-    font-size: var(--font-md);
-    margin: auto;
-  }
-
   .landing__hero .cluster {
     flex-wrap: wrap-reverse;
     justify-content: center;
   }
 
-  .landing__hero > .cluster > img {
-    height: 20vw;
-    padding: 2vh;
+  .landing__text {
+    font-size: var(--font-md);
+    margin: auto;
   }
 }
 
@@ -157,10 +150,11 @@ body {
   padding: 1ch;
 }
 
-.about, .shop {
-  height: 100vh;
+/** placeholder **/
+.about,
+.shop__plist {
+  height: 100dvh;
 }
-
 
 .flower--primary {
   fill: white;
@@ -179,22 +173,28 @@ body {
   fill: var(--primary-accent-colour);
 }
 
-.products, .quote {
+.products,
+.quote {
   display: grid;
-  padding: 3vh 5vh 3vh 5vh;
   background-color: white;
 }
 
+
+/** - fix this issue to not be redudant **/ 
 .services {
-  display: flex;
   background-color: var(--secondary-accent-colour);
   color: var(--secondary-colour);
-  padding: var(--space-xl);
 }
 
 .services--alternate {
   background-color: var(--secondary-colour);
   color: var(--secondary-accent-colour);
+}
+
+.services .services--alternate {
+  display: flex;
+  background-color: var(--secondary-accent-colour);
+  color: var(--secondary-colour);
   padding: var(--space-xl);
 }
 
@@ -260,4 +260,16 @@ body {
 .right {
   box-sizing: content-box;
   margin-right: auto;
+}
+
+.padding-sml {
+  padding: var(--space-sm);
+}
+
+.padding-md {
+  padding: var(--space-md);
+}
+
+.padding-lg {
+  padding: var(--space-lg);
 }
