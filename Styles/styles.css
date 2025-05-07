@@ -10,7 +10,7 @@
   --background-colour: #f9f0da;
   --background-accent: #ebd6a3;
 
-  --border-standard: 0.15rem;
+  --border-standard: 2px;
 
   /** space units **/
   --space-unit: 1rem;
@@ -151,10 +151,19 @@ body {
 }
 
 /** placeholder **/
-.about,
 .shop__plist {
   height: 100dvh;
 }
+
+.about {
+  display: flex;
+  flex-direction: row;
+}
+
+.about__content, .about__image {
+  width: 50%;
+}
+
 
 .flower--primary {
   fill: white;
@@ -173,15 +182,47 @@ body {
   fill: var(--primary-accent-colour);
 }
 
-.products,
+.chefs-picks,
 .quote {
   display: grid;
   background-color: white;
 }
 
+.products__scroll {
+  display: flex; 
+  overflow-x: auto; 
+  overflow-y: hidden;
+  gap: var(--space-md); 
+  padding: var(--space-sm); 
+  scroll-behavior: smooth; 
+}
 
-/** - fix this issue to not be redudant **/ 
+.product {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.product img {
+  height: 270px;
+  width: 300px; 
+  border-radius: 15px;
+  border-width: var(--border-standard);
+  border: solid;
+}
+
+@media all and (max-width: 600px) {
+  .product {
+    width: 150px; 
+    height: 150px;
+  }
+}
+
 .services {
+  display: flex;
+  padding: var(--space-xl);
+}
+
+.services--default {
   background-color: var(--secondary-accent-colour);
   color: var(--secondary-colour);
 }
@@ -189,20 +230,6 @@ body {
 .services--alternate {
   background-color: var(--secondary-colour);
   color: var(--secondary-accent-colour);
-}
-
-.services .services--alternate {
-  display: flex;
-  background-color: var(--secondary-accent-colour);
-  color: var(--secondary-colour);
-  padding: var(--space-xl);
-}
-
-.locations {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
 }
 
 .dfooter {
@@ -262,7 +289,7 @@ body {
   margin-right: auto;
 }
 
-.padding-sml {
+.padding-sm {
   padding: var(--space-sm);
 }
 
@@ -272,4 +299,8 @@ body {
 
 .padding-lg {
   padding: var(--space-lg);
+}
+
+.margin-md {
+  margin: var(--space-sm);
 }
