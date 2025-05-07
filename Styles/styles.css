@@ -34,6 +34,7 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 *::before,
@@ -68,6 +69,7 @@ body {
   background-color: var(--secondary-colour);
   color: var(--secondary-accent-colour);
 }
+
 
 .nav-main {
   display: block;
@@ -124,7 +126,6 @@ body {
   height: 90%;
   text-align: right;
   align-content: end;
-  text-transform: uppercase;
   font-size: var(--font-lg);
 }
 
@@ -160,8 +161,16 @@ body {
   flex-direction: row;
 }
 
-.about__content, .about__image {
-  width: 50%;
+.about img {
+  height: 500px;
+  max-width: 100%;
+}
+
+
+@media all and (max-width: 600px) {
+  .about {
+    flex-wrap: wrap;
+  }
 }
 
 
@@ -208,12 +217,13 @@ body {
   border-radius: 15px;
   border-width: var(--border-standard);
   border: solid;
+  margin-bottom: var(--space-xs);
 }
 
 @media all and (max-width: 600px) {
-  .product {
-    width: 150px; 
-    height: 150px;
+  .product img {
+    width: 200px; 
+    height: 200px;
   }
 }
 
