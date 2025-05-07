@@ -166,11 +166,24 @@ body {
   max-width: 100%;
 }
 
+.about__content {
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 40%;
+  text-transform: capitalize;
+}
+
 
 @media all and (max-width: 600px) {
   .about {
     flex-wrap: wrap;
   }
+
+  .about__content {
+    max-width: 100%;
+    text-transform: capitalize;
+  }
+  
 }
 
 
