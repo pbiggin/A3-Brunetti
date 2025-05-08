@@ -181,7 +181,6 @@ body {
 
   .about__content {
     max-width: 100%;
-    text-transform: capitalize;
   }
   
 }
@@ -204,10 +203,10 @@ body {
   fill: var(--primary-accent-colour);
 }
 
-.chefs-picks,
-.quote {
+.chefs-picks{
   display: grid;
   background-color: white;
+  padding-top: var(--space-lg);
 }
 
 .products__scroll {
@@ -240,10 +239,12 @@ body {
   }
 }
 
-.services {
+.content-wrapper {
   display: flex;
-  padding: var(--space-xl);
+  flex-wrap: wrap;
+  flex-direction: row;
 }
+
 
 .services--default {
   background-color: var(--secondary-accent-colour);
