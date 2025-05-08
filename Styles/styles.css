@@ -188,14 +188,12 @@ body {
 
 .flower--primary {
   fill: white;
-  margin-bottom: -1px;
   /**   this margin-top needs to be fixed**/
 }
 
 .flower--flipped {
   fill: var(--secondary-colour);
   transform: rotate(180deg);
-  margin-top: -1px;
   /**   this margin-top needs to be fixed**/
 }
 
@@ -241,10 +239,37 @@ body {
 
 .content-wrapper {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
+  gap: var(--space-md);
 }
 
+.content-wrapper card {
+  flex: 1;
+}
+
+.content-wrapper aside {
+  flex: 0 0 auto; 
+}
+
+@media all and (max-width: 600px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .content-wrapper card,
+  .content-wrapper aside {
+    flex: 1;
+    text-align: center; 
+  }
+
+  .content-wrapper aside img {
+    width: 100%; 
+    max-width: 200px; 
+    height: auto;
+  }
+}
 
 .services--default {
   background-color: var(--secondary-accent-colour);
