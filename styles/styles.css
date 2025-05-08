@@ -239,7 +239,6 @@ body {
 
 .content-wrapper {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: var(--space-md);
 }
@@ -271,6 +270,13 @@ body {
   }
 }
 
+@media all and (max-width: 600px) {
+  .two-column-list dt,
+  .two-column-list dd {
+    flex: 0 0 100%; /* Each item takes up the full width */
+  }
+}
+
 .services--default {
   background-color: var(--secondary-accent-colour);
   color: var(--secondary-colour);
@@ -281,20 +287,84 @@ body {
   color: var(--secondary-accent-colour);
 }
 
+
+.store-locations {
+  max-width: 60%;
+  flex: 1; 
+}
+
+.locations__list {
+  display: flex;
+  flex-wrap: wrap; 
+  flex-direction: row;
+  padding: var(--space-md);
+}
+
+.location {
+  box-sizing: border-box; 
+  padding: var(--space-sm); 
+  color: var(--primary-colour);
+  width: 50%;
+}
+
+.location__image {
+  flex: 0 0 20%;
+  text-align: center; 
+}
+
+.location__image img {
+  width: 100%; 
+  height: auto;
+  max-width: 150px; 
+}
+
+@media all and (max-width: 600px) {
+  .location__image {
+    flex: 0 0 auto; 
+    margin-bottom: var(--space-md);
+  }
+
+  .store-locations {
+    width: 100%; 
+  }
+}
+
+.location h3 {
+  margin-bottom: var(--space-xs);
+  color: var(--dominant-colour);
+}
+
+.location p {
+  margin: 0;
+}
+
+@media all and (max-width: 600px) {
+  .location {
+    flex: 0 0 100%; /* Take up 100% of the width on smaller screens */
+  }
+}
+
 .dfooter {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background-color: var(--primary-accent-colour);
-  height: 10vh;
   padding-top: var(--space-xl);
+  
+}
+
+.dfooter__input {
+  width: 30vw;
 }
 
 .dfooter__links {
+  display: flex;
   background-color: white;
   border-style: solid none solid none;
   border-top-color: var(--dominant-colour);
   border-width: var(--border-standard);
   padding-top: 0.4%;
   padding-bottom: 0.4%;
+  justify-content: space-around;
 }
 
 /** common tools **/
@@ -326,6 +396,7 @@ body {
   box-sizing: content-box;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .left {
