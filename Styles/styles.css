@@ -71,15 +71,59 @@ body {
   color: var(--secondary-accent-colour);
 }
 
-.nav-main {
-  display: block;
-  background-color: white;
-  position: absolute;
+.navigation {
+  position: fixed;
+  box-sizing: content-box;
+  width: 50%;
   top: 3rem;
-  right: 2rem;
-  padding: 1%;
+  right: 3rem;
+  z-index: 1; 
+  background-color: white; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: var(--space-sm);
   border-radius: 30px;
 }
+
+.overlay {
+  position: fixed;
+  flex-direction: column;
+  gap: var(--space-lg);
+  font-size: var(--font-lg);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.hamburger {
+  z-index: 1;
+  display: none;
+  border: none;
+}
+
+@media all and (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navigation {
+    width: auto;
+    top:  3rem;
+    right: 1rem;
+  }
+
+  .navigation__container a {
+    display: none;
+  }
+}
+
 
 .announcement {
   display: flex;
@@ -179,15 +223,24 @@ body {
   }
 }
 
+
+svg {
+  display: block;
+  margin: 0; 
+  padding: 0; 
+  width: 100%; 
+  height: auto; 
+}
+
 .flower--primary {
   fill: white;
-  /**   this margin-top needs to be fixed**/
 }
+
 
 .flower--flipped {
   fill: var(--secondary-colour);
   transform: rotate(180deg);
-  /**   this margin-top needs to be fixed**/
+  
 }
 
 .flower--accent {
@@ -205,7 +258,6 @@ body {
   scroll-behavior: smooth; 
   gap: var(--space-md); 
   padding: var(--space-sm); 
-  cursor: grab;
 }
 
 .product {
@@ -215,17 +267,18 @@ body {
 
 .product img {
   height: 300px;
-  width: 1fr;
+  width: 100%;
   border-radius: 15px;
   border-width: var(--border-standard);
   border: solid;
   margin-bottom: var(--space-xs);
 }
 
+
 @media all and (max-width: 600px) {
   .product img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -378,6 +431,7 @@ body {
   color: var(--dominant-colour);
 }
 
+
 .product p {
   margin: 0;
   font-size: var(--font-sm);
@@ -392,7 +446,7 @@ body {
 
 @media all and (max-width: 600px) {
   .shop__plist {
-    grid-template-columns: 1fr; /* 1 column for small screens */
+    grid-template-columns: 1fr; 
   }
 }
 
