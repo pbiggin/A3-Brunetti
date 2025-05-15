@@ -34,6 +34,13 @@
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
+
+
+/** z-index **/
+  --navigation: 4;
+  --foreground: 3;
+  --midground: 2;
+  --background: 1;
 }
 
 *::before,
@@ -81,7 +88,7 @@ body {
   top: 3rem;
   right: 3rem;
 
-  z-index: 1;
+  z-index: var(--navigation);
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: var(--space-sm);
@@ -105,7 +112,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: var(--navigation);
 }
 
 .hidden {
@@ -113,7 +120,7 @@ body {
 }
 
 .hamburger {
-  z-index: 1;
+  z-index: var(--navigation);
   display: none;
   border: none;
 }
@@ -183,7 +190,7 @@ body {
 }
 
 @media all and (max-width: 600px) {
-  .landing__hero .cluster {
+  .landing__hero > .cluster {
     flex-wrap: wrap-reverse;
     justify-content: center;
   }
@@ -216,16 +223,8 @@ body {
   margin-bottom: 5%;
   max-width: 50%;
   min-height: 300px;
-}
-
-@media all and (max-width: 600px) {
-  .about__image {
-    max-width: 100%;
-  }
-
-  #mud-cake {
-    margin-right: -15%;
-  }
+  max-height: 600px;
+  z-index: var(--background);
 }
 
 #con-amore {
@@ -251,15 +250,36 @@ body {
   margin-bottom: auto;
   text-transform: capitalize;
   max-width: 50ch;
+  z-index: var(--midground);
 }
 
 @media all and (max-width: 600px) {
   .about {
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding-bottom: var(--space-xl);
   }
 
-  .about__content {
+  .about__image {
     max-width: 100%;
+    position: relative;
+    margin-top: -20%;
+  }
+
+  #mud-cake {
+    position: absolute;
+    margin-right: -35%;
+    top: 40%;
+    width: 90%;
+  }
+
+  #con-amore {
+    margin-left: -30%;
+  }
+
+  .about .about__content {
+    padding: var(--space-lg);
+    padding-top: var(--space-xl)
   }
 }
 
@@ -269,6 +289,19 @@ svg {
   padding: 0;
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .flower-container {
+    position: relative; 
+    overflow: hidden; 
+    width: 100%; 
+  }
+
+  .flower {
+    width: 350%; 
+    margin-left: -8%; /* Move the SVG to the left to crop it */
+  }
 }
 
 .flower--primary {
