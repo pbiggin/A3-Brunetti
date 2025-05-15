@@ -35,8 +35,7 @@
   font-style: normal;
   text-transform: uppercase;
 
-
-/** z-index **/
+  /** z-index **/
   --navigation: 4;
   --foreground: 3;
   --midground: 2;
@@ -142,7 +141,7 @@ body {
 }
 
 .announcement {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +180,6 @@ body {
 .landing__hero > .cluster > img {
   max-height: 150px;
   min-height: 105px;
-  max-width: auto;
   height: 15vw;
   padding: 2vh;
 }
@@ -191,6 +189,9 @@ body {
   text-align: right;
   align-content: end;
   font-size: var(--font-lg);
+  padding-bottom: var(--space-xl);
+  color: white;
+  text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.48);
 }
 
 @media all and (max-width: 600px) {
@@ -199,9 +200,14 @@ body {
     justify-content: center;
   }
 
+  .landing .logo  {
+    display: none;
+  }
+
   .landing__text {
     font-size: var(--font-md);
     margin: auto;
+    padding-bottom: var(--space-xl);
   }
 }
 
@@ -284,7 +290,7 @@ body {
 
   .about .about__content {
     padding: var(--space-lg);
-    padding-top: var(--space-xl)
+    padding-top: var(--space-xl);
   }
 }
 
@@ -296,15 +302,22 @@ svg {
   height: auto;
 }
 
+.flower-container {
+  position: relative; 
+  overflow: hidden; 
+  width: 100%; 
+  height: auto;
+}
+
 @media screen and (max-width: 600px) {
   .flower-container {
-    position: relative; 
-    width: 100%; 
+    position: relative;
+    width: 100%;
   }
 
   .flower {
-    width: 350%; 
-    margin-left: -8%; 
+    width: 350%;
+    margin-left: -8%;
   }
 }
 
@@ -321,15 +334,36 @@ svg {
   fill: var(--primary-accent-colour);
 }
 
-#flower-background {
+.landing__background {
   position: absolute;
-  top: -20%;
-  right: -15%;
-  width: 140vh;
-  scale: 0.9;
-  height: auto;
+  width: 100vw;
   z-index: var(--background);
 }
+
+#flower-background {
+  position: absolute;
+  width: auto; 
+  height: 190vh; 
+  top: 0;
+  right: 0; 
+  transform: translateX(35%); 
+}
+
+@media screen and (max-width: 600px) {
+
+  .landing__background {
+    width: 100vw;
+    align-content: center;
+  }
+  #flower-background {
+    position: absolute;
+    width: auto;
+    height: 155vh; 
+    top: 0;
+    transform: translateX(48%); 
+}
+  }
+
 
 .chefs-picks {
   display: grid;
