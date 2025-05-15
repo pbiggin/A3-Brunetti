@@ -142,6 +142,7 @@ body {
 }
 
 .announcement {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,6 +150,7 @@ body {
   height: 25px;
   padding-top: var(--space-xxs);
   padding-bottom: var(--space-xxs);
+  z-index: var(--foreground);
 
   background-color: var(--dominant-colour);
   color: var(--primary-accent-colour);
@@ -163,6 +165,8 @@ body {
   flex-direction: column;
   height: auto;
   overflow: hidden;
+  position: relative;
+  z-index: var(--midground);
 }
 
 .landing__hero {
@@ -209,6 +213,7 @@ body {
   color: var(--secondary-colour);
   height: auto;
   padding: 1ch;
+  z-index: var(--midground);
 }
 
 .about {
@@ -294,13 +299,12 @@ svg {
 @media screen and (max-width: 600px) {
   .flower-container {
     position: relative; 
-    overflow: hidden; 
     width: 100%; 
   }
 
   .flower {
     width: 350%; 
-    margin-left: -8%; /* Move the SVG to the left to crop it */
+    margin-left: -8%; 
   }
 }
 
@@ -315,6 +319,16 @@ svg {
 
 .flower--accent {
   fill: var(--primary-accent-colour);
+}
+
+#flower-background {
+  position: absolute;
+  top: -20%;
+  right: -15%;
+  width: 140vh;
+  scale: 0.9;
+  height: auto;
+  z-index: var(--background);
 }
 
 .chefs-picks {
