@@ -22,7 +22,7 @@
   --space-xl: calc(3.25 * var(--space-unit));
 
   /** font units **/
-  --font-unit: 16pt;
+  --font-unit: 1.2rem;
   --font-xxs: calc(0.25 * var(--font-unit));
   --font-xs: calc(0.5 * var(--font-unit));
   --font-md: calc(1.15 * var(--font-unit));
