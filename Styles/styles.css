@@ -27,6 +27,7 @@
   --font-xs: calc(0.5 * var(--font-unit));
   --font-md: calc(1.15 * var(--font-unit));
   --font-lg: calc(2 * var(--font-unit));
+  --font-xxl: calc(4 * var(--font-unit));
 
   /** main font **/
 
@@ -225,7 +226,8 @@ body {
 .about {
   display: flex;
   flex-direction: row;
-  gap: 5%;
+  gap: 2%;
+  padding-right: 2%;
 }
 
 .about__image {
@@ -366,8 +368,9 @@ svg {
     position: absolute;
     width: auto;
     height: 95vh; 
-    top: -10%;
-    transform: translateX(4.4%);
+    top: -15%;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .flower-image {
@@ -420,10 +423,6 @@ svg {
   gap: var(--space-md);
 }
 
-.content-wrapper aside {
-  flex: 0 0 auto;
-}
-
 @media all and (max-width: 600px) {
   .content-wrapper {
     flex-direction: column;
@@ -458,6 +457,29 @@ svg {
 .services--alternate {
   background-color: var(--secondary-colour);
   color: var(--secondary-accent-colour);
+}
+
+.image-container {
+  display: flex;
+  width: 40%;
+  overflow: hidden; 
+  border-radius: 30px;
+}
+
+.image-container > img {
+  height: 50%;
+  object-fit: cover; 
+  object-position: center;
+}
+
+.content__text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: var(--space-lg);
 }
 
 .store-locations {
@@ -638,3 +660,15 @@ svg {
 .margin-md {
   margin: var(--space-sm);
 }
+
+h2 {
+  text-transform: uppercase;
+  font-size: clamp(var(--font-md), 10vw, var(--font-lg));
+  text-align: center;
+  color: var(--dominant-colour);
+}
+
+.body-text {
+  text-wrap: balance;
+  font-size: clamp(var(--font-md), 2vw, var(--font-lg));
+  text-align: left;}
