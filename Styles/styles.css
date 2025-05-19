@@ -230,7 +230,7 @@ body {
 
 .about__image {
   position: relative;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 5%;
   max-width: 50%;
   min-height: 300px;
@@ -257,7 +257,7 @@ body {
 }
 
 .about__content {
-  margin-top: auto;
+  margin-top: 10%;
   margin-bottom: auto;
   text-transform: capitalize;
   max-width: 50ch;
@@ -310,11 +310,6 @@ svg {
 }
 
 @media screen and (max-width: 600px) {
-  .flower-container {
-    position: relative;
-    width: 100%;
-  }
-
   .flower {
     width: 350%;
     margin-left: -8%;
@@ -335,32 +330,51 @@ svg {
 }
 
 .landing__background {
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
   width: 100vw;
+  height: 100vh;
+  top: 0;
   z-index: var(--background);
 }
+
 
 #flower-background {
   position: absolute;
   width: auto; 
-  height: 190vh; 
-  top: 0;
-  right: 0; 
-  transform: translateX(35%); 
+  height: 130%; 
+
+  top: -30vh;
+  right: -20vh; 
+}
+
+.flower-image {
+  x: -70%;
+  y:  250; 
+  width: auto; 
+  height: 90%; 
 }
 
 @media screen and (max-width: 600px) {
 
   .landing__background {
-    width: 100vw;
-    align-content: center;
+    align-items: center;
+    overflow: hidden;
   }
   #flower-background {
     position: absolute;
     width: auto;
-    height: 155vh; 
-    top: 0;
-    transform: translateX(48%); 
+    height: 95vh; 
+    top: -10%;
+    transform: translateX(4.4%);
+}
+
+.flower-image {
+  x: -77%;
+  y: -30%;  
+  width: 170%; 
+  height: 170%;
 }
   }
 
