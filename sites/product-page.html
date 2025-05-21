@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="overlay hidden">
+      <a href="../index.html">Home</a>
+      <a href="#services">Products</a>
+      <a href="#menu">Custom</a>
+      <a href="sites/shop.html"><strong>Cart</strong></a>
+    </div>
+
+    <nav class="navigation">
+      <div class="navigation__container cluster">
+        <a href="../index.html">Home</a>
+        <a href="#services">Products</a>
+        <a href="#menu">Custom</a>
+        <a class="cluster" href="sites/shop.html"
+          ><strong>CART</strong>
+          <p>svg</p></a
+        >
+      </div>
+      <button class="hamburger" onclick="toggleOverlay()">
+        <svg viewBox="0 0 100 80" width="80" height="40">
+          <rect
+            class="st0"
+            x="1"
+            y="15"
+            width="100"
+            height="6"
+            rx="1.7"
+            ry="1.7"
+          />
+          <rect
+            class="st0"
+            x="1"
+            y="45"
+            width="100"
+            height="6"
+            rx="1.7"
+            ry="1.7"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <div class="announcement">
+      <p>announcement</p>
+    </div>
+    <img
+      class="logo"
+      src="../images/brunetti-logo.png"
+      width="auto"
+      height="80px"
+    />
+    <main class="product-layout padding-lg">
+      <section class="content-wrapper">
+        <aside class="product__aside">
+          <div  id="product-img" class="image-wrapper">
+            <img src="../images/placeholder.webp" />
+          </div>
+        </aside>
+
+        <div class="content__text">
+          <h2>product name</h2>
+          <p>Available in store</p>
+          <p>A shortbread base with a lemon cream, with a passionfruit, mango and apricot glaze and icing sugar.
+            </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

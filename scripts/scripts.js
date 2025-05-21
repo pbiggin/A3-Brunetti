@@ -2,7 +2,6 @@ let productsPerPage = 12;
 let currentPage = 0;
 let isExpanded = false;
 
-// Function to load products
 function loadProducts() {
   const productList = document.getElementById("product-list");
   const start = currentPage * productsPerPage;
@@ -11,7 +10,6 @@ function loadProducts() {
 
   productsToLoad.forEach((product) => {
     // Determine the price based on the product type
-
     let price;
     if (product.type === "premium") {
       price = "From $46.00";
@@ -22,32 +20,34 @@ function loadProducts() {
     } else {
       price = "Price not available";
     }
+
     // Create product card
     const productDiv = document.createElement("div");
     productDiv.classList.add("product");
 
     productDiv.innerHTML = `
+      <a href="product-page.html">
         <img src="${product.image}" alt="${product.name}" />
-        <h3>${product.name}</h3>
-        <p>${price}</p>
-      `;
+      </a>
+      <h3>${product.name}</h3>
+      <p>${price}</p>
+    `;
 
     productList.appendChild(productDiv);
   });
 
   currentPage++;
+}
 
-  if (currentPage * productsPerPage >= products.length) {
-    document.getElementById("load-more").innerText = "Load Less";
-    isExpanded = true;
-  }
+if (currentPage * productsPerPage >= products.length) {
+  document.getElementById("load-more").innerText = "Load Less";
+  isExpanded = true;
 }
 
 function loadLessProducts() {
   const productList = document.getElementById("product-list");
   const allProducts = Array.from(productList.children);
 
-  // Remove products beyond the first batch
   const productsToRemove = allProducts.slice(productsPerPage);
   productsToRemove.forEach((product) => product.remove());
 
@@ -67,8 +67,7 @@ document.getElementById("load-more").addEventListener("click", () => {
 
 loadProducts();
 
-
-function toggleOverlay () {
+function toggleOverlay() {
   const overlay = document.querySelector(".overlay");
-    overlay.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
 }

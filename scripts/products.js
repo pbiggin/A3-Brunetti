@@ -52,7 +52,7 @@ const products = [
       image: "../images/placeholder.webp",
     },
     {
-      name: "Croquembuche",
+      name: "Croquembuoche",
       type: "premium",
       image: "../images/placeholder.webp",
     },
