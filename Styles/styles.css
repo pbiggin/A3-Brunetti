@@ -670,5 +670,5 @@ h2 {
 
 .body-text {
   text-wrap: balance;
-  font-size: clamp(var(--font-sm), 2vw, var(--font-md));
+  font-size: clamp(var(--font-sm), 1vw, var(--font-md));
   text-align: left;}
