@@ -680,7 +680,7 @@ h2 {
 .body-text {
   text-transform:lowercase;
   text-wrap: normal;
-  font-size: clamp(var(--font-xs), 1.5vw, var(--font-md));
+  font-size: clamp(var(--font-sm), 1.5vw, var(--font-md));
   text-align: left;
   line-height: var(--space-lg);
 }
