@@ -57,21 +57,138 @@
       width="auto"
       height="80px"
     />
-    <main class="product-layout padding-lg">
+
+    <main class="item-layout margin-md padding-lg">
+      <div class="cluster">
+        <a href="shop.html" class="padding-sm"> Celebration Cakes </a>
+        <h3>Product Name</h3>
+      </div>
       <section class="content-wrapper">
-        <aside class="product__aside">
-          <div  id="product-img" class="image-wrapper">
+        <aside class="item__aside">
+          <div id="item__image" class="image-wrapper">
             <img src="../images/placeholder.webp" />
+          </div>
+          <div class="item__thumbnail-wrapper">
+            <div class="image-wrapper item__thumbnail">
+              <img src="../images/placeholder.webp" />
+            </div>
+            <div class="image-wrapper item__thumbnail">
+              <img src="../images/placeholder.webp" />
+            </div>
           </div>
         </aside>
 
         <div class="content__text">
           <h2>product name</h2>
-          <p>Available in store</p>
-          <p>A shortbread base with a lemon cream, with a passionfruit, mango and apricot glaze and icing sugar.
-            </p>
+          <h3 class="center">From $65.00</h3>
+          <p class="center">Available in store up to 10 portions</p>
+          <p>
+            A shortbread base with a lemon cream, with a passionfruit, mango and
+            apricot glaze and icing sugar.
+          </p>
+          <label for="portion-size" class="dropdown-label"
+            >Select Portion Size:</label
+          >
+          <select id="portion-size" class="dropdown margin-md">
+            <option value="6">6 Portions</option>
+            <option value="8">8 Portions</option>
+            <option value="10">10 Portions</option>
+          </select>
+
+          <button class="standard-btn center">ORDER NOW</button>
         </div>
       </section>
     </main>
+    <section class="product__information center">
+      <div class="info-box">
+        <div class="info-box__tabs">
+          <button class="info-box__tab active" data-tab="dietary">
+            DIETARY
+          </button>
+          <button class="info-box__tab" data-tab="flavours">FLAVOURS</button>
+          <button class="info-box__tab" data-tab="ordering">ORDERING</button>
+        </div>
+        <div class="info-box__content">
+          <div class="info-box__section active" id="dietary">
+            <h3>CONTAINS:</h3>
+            <p>
+              HALAL, NON-ALCOHOLIC, DAIRY, GLUTEN, (HALAL) GELATIN, SOY, FRUIT
+            </p>
+          </div>
+          <div class="info-box__section" id="flavours">
+            <h3>FLAVOURS:</h3>
+            <p>CHOCOLATE, VANILLA, STRAWBERRY, LEMON, MANGO</p>
+          </div>
+          <div class="info-box__section" id="ordering">
+            <h3>ORDERING:</h3>
+            <p>
+              AVAILABLE IN-STORE AND ONLINE. PRE-ORDER REQUIRED FOR SIZES ABOVE 10 PORTIONS OR CUSTOMIZATIONS. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <button onclick="history.back()">Back</button>
+    </section>
+
+    <section class="product__suggestion">
+      <h2 class="left padding-lg text-primary">You may also like...</h2>
+      <div class="products__scroll">
+        <div class="product">
+          <img src="../images/placeholder.webp" alt="Product 1" />
+          <p>Product 1</p>
+        </div>
+        <div class="product">
+          <img src="../images/placeholder.webp" alt="Product 2" />
+          <p>Product 2</p>
+        </div>
+        <div class="product">
+          <img src="../images/placeholder.webp" alt="Product 3" />
+          <p>Product 3</p>
+        </div>
+        <div class="product">
+          <img src="../images/placeholder.webp" alt="Product 4" />
+          <p>Product 4</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="flower-container">
+      <svg viewBox="0 0 1110.3 27" class="flower fill-accent">
+        <defs>
+          <path class="st0" d="M38.3-21.8" />
+          <path
+            id="flower-border"
+            d="M1978.8,27.1l-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0h0c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.1,0h0c-34-34-89.1-34-123.1,0l-.3.3-.3-.3c-34-34-89.1-34-123.1,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3C89.4-7.2,34.3-7.2.3,26.8l-.3.3"
+          />
+        </defs>
+        <use xlink:href="#flower-border" />
+      </svg>
+    </div>
+
+    <footer class="dfooter">
+      <div class="center padding-md">
+        <img
+          class="margin-md logo"
+          src="../images/brunetti-logo.png"
+          width="200px"
+        />
+        <h3>Join our mailing list</h3>
+        <input
+          type="text"
+          class="dfooter__input center margin-md"
+          placeholder="Enter your email address"
+        />
+      </div>
+      <div class="dfooter__links">
+        <a>Stores</a>
+        <a>Service</a>
+        <a>Products</a>
+        <a>Contact</a>
+      </div>
+      <div class="announcement">
+        <p>© Brunetti Classico 2025</p>
+      </div>
+    </footer>
+    <script src="../scripts/scripts.js"></script>
   </body>
 </html>
