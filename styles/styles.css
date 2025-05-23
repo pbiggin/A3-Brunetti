@@ -650,10 +650,10 @@ svg.fill-secondary  {
 
 
 .info-box {
-  max-width: 600px;
-  margin: 2rem auto;
-  border: 1px solid var(--dominant-colour);
-  border-radius: 10px;
+  max-width: 80%;
+  min-width: 500px;
+  border: var(--border-standard) solid var(--dominant-colour);
+  border-radius: 15px;
   background-color: var(--background-colour);
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
@@ -664,20 +664,18 @@ svg.fill-secondary  {
   display: flex;
   justify-content: space-around;
   background-color: var(--background-accent);
-  border-bottom: 1px solid var(--dominant-colour);
+  border-bottom: var(--border-standard) solid var(--dominant-colour);
 }
 
 .info-box__tab {
   flex: 1;
-  padding: 1rem;
+  padding: var(--space-md);
   text-align: center;
   font-size: var(--font-md);
   font-weight: bold;
   color: var(--dominant-colour);
-  background: none;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .info-box__tab:hover {
@@ -692,7 +690,7 @@ svg.fill-secondary  {
 
 
 .info-box__content {
-  padding: var(--space-md)  ;
+  padding: var(--space-lg)  ;
   background-color: white;
 }
 

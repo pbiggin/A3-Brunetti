@@ -71,20 +71,3 @@ function toggleOverlay() {
   const overlay = document.querySelector(".overlay");
   overlay.classList.toggle("hidden");
 }
-
-
-
-const tabs = document.querySelectorAll(".info-box__tab");
-const sections = document.querySelectorAll(".info-box__section");
-
-// Add click event listeners to each tab
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => { 
-    tabs.forEach((t) => t.classList.remove("active"));
-    sections.forEach((section) => section.classList.remove("active"));
-
-    tab.classList.add("active");
-    const target = tab.getAttribute("data-tab");
-    document.getElementById(target).classList.add("active");
-  });
-});

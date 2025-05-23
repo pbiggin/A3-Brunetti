@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
-    <title>Document</title>
+    <title>Product Name</title>
   </head>
   <body>
     <div class="overlay hidden">
@@ -100,11 +101,9 @@
       </section>
     </main>
     <section class="product__information center">
-      <div class="info-box">
+      <div class="info-box center pad">
         <div class="info-box__tabs">
-          <button class="info-box__tab active" data-tab="dietary">
-            DIETARY
-          </button>
+          <button class="info-box__tab" id="dietary">DIETARY</button>
           <button class="info-box__tab" data-tab="flavours">FLAVOURS</button>
           <button class="info-box__tab" data-tab="ordering">ORDERING</button>
         </div>
@@ -117,17 +116,18 @@
           </div>
           <div class="info-box__section" id="flavours">
             <h3>FLAVOURS:</h3>
-            <p>CHOCOLATE, VANILLA, STRAWBERRY, LEMON, MANGO</p>
+            <p>flavours will go here</p>
           </div>
           <div class="info-box__section" id="ordering">
             <h3>ORDERING:</h3>
             <p>
-              AVAILABLE IN-STORE AND ONLINE. PRE-ORDER REQUIRED FOR SIZES ABOVE 10 PORTIONS OR CUSTOMIZATIONS. 
+              AVAILABLE IN-STORE AND ONLINE. PRE-ORDER REQUIRED FOR SIZES ABOVE
+              10 PORTIONS OR CUSTOMIZATIONS.
             </p>
           </div>
         </div>
       </div>
-      <button onclick="history.back()">Back</button>
+      <button class="margin-md" onclick="history.back()">Back</button>
     </section>
 
     <section class="product__suggestion">
