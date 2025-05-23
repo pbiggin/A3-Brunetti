@@ -361,7 +361,7 @@ svg.fill-secondary  {
     position: absolute;
     width: auto;
     height: 95vh; 
-    top: -15%;
+    top: -15vh;
     left: 50%;
     transform: translate(-50%);
 }
