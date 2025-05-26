@@ -265,6 +265,24 @@ body {
   object-fit: cover;
 }
 
+#mud-cake--quote {
+  max-width: 100%;
+  min-width: auto;
+  margin-left: -25%;
+  margin-bottom: 20%;
+  object-fit: cover;
+  max-height: 100%;
+}
+
+#con-amore--quote {
+  max-width: 100%;
+  min-width: auto;
+  margin-right: -25%;
+  margin-bottom: 20%;
+  object-fit: cover;
+  max-height: 100%;
+}
+
 .about__content {
   margin-top: 10%;
   margin-bottom: auto;
@@ -387,6 +405,7 @@ svg.fill-secondary  {
   display: grid;
   background-color: white;
   padding-top: var(--space-lg);
+   overflow: hidden;
 }
 .products__scroll {
   display: flex;
@@ -522,7 +541,7 @@ svg.fill-secondary  {
 }
 
 .store-locations {
-  max-width: 60%;
+  max-width: 70%;
   flex: 1;
 }
 

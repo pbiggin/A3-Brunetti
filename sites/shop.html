@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
     <title>Brunetti Classico</title>
   </head>
@@ -56,13 +56,15 @@
     </div>
 
     <main class="shop">
-      <img
-        class="logo"
-        src="../images/brunetti-logo.png"
-        width="auto"
-        height="80px"
-      />
-      <h1 class="margin-md">Shop</h1>
+      <a href="../index.html">
+        <img
+          class="logo padding-md"
+          src="../images/brunetti-logo.png"
+          width="auto"
+          height="80px"
+        />
+      </a>
+      <h1 class="margin-md">Shop</h1>z
       <section class="shop__plist" id="product-list"></section>
 
       <button id="load-more" class="standard-btn center">Load More</button>
@@ -84,7 +86,11 @@
 
       <article class="content-wrapper">
         <aside class="location__image right">
-          <img src="../images/mudCake_splash.webp" alt="Left Image" />
+          <img
+            id="mud-cake--quote"
+            src="../images/mudCake_splash.webp"
+            alt="Mud Cake"
+          />
         </aside>
 
         <section class="store-locations padding-md margin-md">
@@ -99,21 +105,29 @@
           >
         </section>
         <aside class="location__image left">
-          <img src="../images/conAmore_splash.webp" alt="right Image" />
+          <img
+            id="con-amore--quote"
+            src="../images/conAmore_splash.webp"
+            alt="Con Amore Cake"
+          />
         </aside>
       </article>
     </section>
 
-    <footer class="dfooter padding-md">
+    <footer class="dfooter">
       <div class="center padding-md">
-        <img class="margin-md logo" src="../images/brunetti-logo.png" width="200px" />
+        <img
+          class="margin-md logo"
+          src="../images/brunetti-logo.png"
+          alt="Brunetti Classico Logo"
+          width="200px"
+        />
         <h3>Join our mailing list</h3>
         <input
           type="text"
           class="dfooter__input center margin-md"
           placeholder="Enter your email address"
         />
-
       </div>
       <div class="dfooter__links">
         <a>Stores</a>
