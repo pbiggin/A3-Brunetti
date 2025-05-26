@@ -1,1 +1,1 @@
-Project repository for INFO20001 SM1 - Assignment 3
+Project repository for INFO20005 SM1 - Assignment 3
