@@ -25,9 +25,11 @@ function loadProducts() {
       productDiv.classList.add("product");
   
       productDiv.innerHTML = `
+        <a href="${product.link}" class="product-link"> 
         <img src="${product.image}" alt="${product.name}" />
         <h3>${product.name}</h3>
         <p>${price}</p>
+        </a> 
       `;
   
       productList.appendChild(productDiv);
