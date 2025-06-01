@@ -427,10 +427,12 @@ svg.fill-secondary  {
 }
 
 .product img {
-  height: 300px;
+  aspect-ratio: 1.36 / 1;
+  height: auto;
   width: 100%;
   border-radius: 15px;
   margin-bottom: var(--space-xs);
+  object-fit: cover;
 }
 
 
@@ -525,7 +527,7 @@ svg.fill-secondary  {
 }
 
 #item__image > img {
-  object-fit: cover;
+  object-fit: contain;
 }
 
 @media all and (max-width: 600px) {
@@ -552,7 +554,7 @@ svg.fill-secondary  {
 }
 
 .image-wrapper > img {
-  object-fit: cover; 
+  object-fit: contain; 
   object-position: center;
 }
 
@@ -654,6 +656,66 @@ svg.fill-secondary  {
     margin: var(--space-md);
   }
 }
+
+.shop__filters {
+  margin: var(--space-sm);
+  padding: var(--space-sm);
+}
+.shop__filters fieldset {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  margin: var(--space-sm);
+  gap: var(--space-sm);
+}
+
+.shop__filters label {
+  display: block;
+  margin: var(--space-sm) 0;
+  font-size: var(--font-sm);
+  color: var(--dominant-colour);
+  background-color: white;
+  padding: var(--space-sm);
+  border: solid var(--border-standard);
+  border-radius: 30px;
+}
+
+.shop__filters input[type="checkbox"]:checked + label {
+  background-color: var(--primary-accent-colour);
+  color: var(--primary-colour);
+}
+
+.shop__filters label:hover {
+  background-color: var(--primary-accent-colour);
+  color: var(--primary-colour);
+  cursor: pointer; 
+}
+
+.shop__filters button {
+  display: block;
+  width: 15rem;
+  padding: var(--space-sm);
+  background-color: var(--secondary-colour);
+  margin: var(--space-md);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+#clear-filters {
+  background-color: white;
+  color: var(--primary-colour);
+  border: solid  var(--border-standard) var(--dominant-colour);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#clear-filters:hover {
+  background-color: var(--dominant-colour);
+}
+
 
 .product {
   height: min-content;

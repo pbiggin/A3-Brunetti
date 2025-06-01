@@ -10,27 +10,16 @@ function loadProducts() {
   
     productsToLoad.forEach((product) => {
    
-      let price;
-    if (product.type === "premium") {
-      price = "From $46.00";
-    } else if (product.type === "standard") {
-      price = "From $43.00";
-    } else if (product.type === "gelato") {
-      price = "$65.00";
-    } else {
-      price = "Price not available";
-    }
-  
       const productDiv = document.createElement("div");
       productDiv.classList.add("product");
   
       productDiv.innerHTML = `
-        <a href="${product.link}" class="product-link"> 
+      <a href="${product.link}" class="product-link"> 
         <img src="${product.image}" alt="${product.name}" />
         <h3>${product.name}</h3>
-        <p>${price}</p>
-        </a> 
-      `;
+        <p>${product.price}</p>
+      </a>
+    `;
   
       productList.appendChild(productDiv);
     });
@@ -43,15 +32,85 @@ function loadProducts() {
     }
   }
 
+  // USED COPILOT TO ASSIST WITH THIS CODE. 
+
+  document.getElementById("apply-filters").addEventListener("click", () => {
+    // Get selected product types
+    const selectedTypes = Array.from(
+      document.querySelectorAll('input[name="product-type"]:checked')
+    ).map((checkbox) => checkbox.value);
+  
+    // Get selected additional categories
+    const halalSelected = document.querySelector('input[name="halal"]:checked') !== null;
+    const glutenFriendlySelected = document.querySelector('input[name="glutenFriendly"]:checked') !== null;
+  
+    // Filter products based on selected criteria
+    const filteredProducts = products.filter((product) => {
+      const matchesType = selectedTypes.length === 0 || selectedTypes.includes(product.type);
+      const matchesHalal = !halalSelected || product.halal === true;
+      const matchesGlutenFriendly = !glutenFriendlySelected || product.glutenFriendly === true;
+  
+      return matchesType && matchesHalal && matchesGlutenFriendly;
+    });
+  
+    // Clear the current product list
+    const productList = document.getElementById("product-list");
+    productList.innerHTML = "";
+  
+    // Display the filtered products
+    filteredProducts.forEach((product) => {
+      const productDiv = document.createElement("div");
+      productDiv.classList.add("product");
+  
+      productDiv.innerHTML = `
+        <a href="${product.link}" class="product-link"> 
+          <img src="${product.image}" alt="${product.name}" />
+          <h3>${product.name}</h3>
+          <p>${product.price}</p>
+        </a>
+      `;
+  
+      productList.appendChild(productDiv);
+    });
+  });
+  
+  // Clear Filters Button Logic
+  document.getElementById("clear-filters").addEventListener("click", () => {
+    // Reset all checkboxes
+    document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+  
+    // Display all products
+    const productList = document.getElementById("product-list");
+    productList.innerHTML = "";
+  
+    products.forEach((product) => {
+      const productDiv = document.createElement("div");
+      productDiv.classList.add("product");
+  
+      productDiv.innerHTML = `
+        <a href="${product.link}" class="product-link"> 
+          <img src="${product.image}" alt="${product.name}" />
+          <h3>${product.name}</h3>
+          <p>${product.price}</p>
+        </a>
+      `;
+  
+      productList.appendChild(productDiv);
+    });
+  });
+  // end of generated code
+  
+
 function loadLessProducts() {
     const productList = document.getElementById("product-list");
     const allProducts = Array.from(productList.children);
   
-    // Remove products beyond the first batch
     const productsToRemove = allProducts.slice(productsPerPage);
     productsToRemove.forEach((product) => product.remove());
   
-    currentPage = 1; // Reset to the first page
+    currentPage = 1; 
     document.getElementById("load-more").innerText = "Load More";
     isExpanded = false;
   }

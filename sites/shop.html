@@ -64,7 +64,40 @@
           height="80px"
         />
       </a>
-      <h1 class="margin-md">Shop</h1>
+      <h1 class="margin-md padding-md">Celebration Cakes</h1>
+      
+      <section class="shop__filters">
+        <h2>Filter Products</h2>
+        <form id="filter-form">
+          <!-- Filter by product type -->
+          <fieldset class="filter-wrapper">
+            <label>
+              <input type="checkbox" name="product-type" value="premium" />
+              Premium
+            </label>
+            <label>
+              <input type="checkbox" name="product-type" value="standard" />
+              Standard
+            </label>
+            <label>
+              <input type="checkbox" name="product-type" value="gelato" />
+              Gelato
+            </label>
+            <label>
+              <input type="checkbox" name="halal" value="true" />
+              Halal
+            </label>
+            <label>
+              <input type="checkbox" name="glutenFriendly" value="true" />
+              Gluten Friendly
+            </label>
+          </fieldset>
+
+        </form>
+        <button type="button" id="apply-filters" class="standard-btn">Apply Filters</button>
+        <button type="button" id="clear-filters" class="standard-btn">Clear Filters</button>
+      </section>
+
       <section class="shop__plist" id="product-list"></section>
 
       <button id="load-more" class="standard-btn center">Load More</button>
