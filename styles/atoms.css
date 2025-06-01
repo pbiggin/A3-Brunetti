@@ -119,6 +119,9 @@ h2 {
 .padding-lg {
   padding: var(--space-lg);
 }
+.padding-xl {
+  padding: var(--space-xl);
+}
 
 .margin-md {
   margin: var(--space-sm);
@@ -156,18 +159,6 @@ h2 {
 
 .fill-white {
   fill: white;
-}
-
-/** possibly redundant **/
-
-.services--default {
-  background-color: var(--secondary-accent-colour);
-  color: var(--secondary-colour);
-}
-
-.services--alternate {
-  background-color: var(--secondary-colour);
-  color: var(--secondary-accent-colour);
 }
 
 svg {

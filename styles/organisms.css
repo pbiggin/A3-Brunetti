@@ -65,6 +65,18 @@ body {
   justify-content: space-between;
 }
 
+@media all and (max-width: 600px) {
+  .navigation {
+    width: auto;
+    top: 3rem;
+    right: 1rem;
+  }
+
+  .navigation__container {
+    display: none;
+  }
+}
+
 .overlay {
   position: fixed;
   flex-direction: column;
@@ -178,6 +190,19 @@ body {
   }
 }
 
+/** service section **/
+.services--default {
+    /** redundant colouring **/
+  background-color: var(--secondary-accent-colour);
+  color: var(--secondary-colour);
+  overflow: hidden;
+}
+
+.services--alternate {
+  background-color: var(--secondary-colour);
+  color: var(--secondary-accent-colour);
+}
+
 /** product list structure **/
 
 .product__chefs-picks,
@@ -216,7 +241,7 @@ body {
   }
 }
 
-/** proudct list structures **/
+/** product list structures **/
 .shop__header {
   margin: var(--space-xl);
   margin-top: var(--space-xl);

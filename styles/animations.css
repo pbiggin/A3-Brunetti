@@ -12,8 +12,9 @@
   
   #apply-filters:hover {
     background-color: var(--secondary-accent-colour);
+    color: var(--secondary-colour);
   }
-  
+
   #clear-filters:hover {
     background-color: var(--primary-accent-colour);
   }
