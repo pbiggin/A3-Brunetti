@@ -687,8 +687,8 @@ svg.fill-secondary  {
 
 .shop__filters label:hover {
   background-color: var(--primary-accent-colour);
-  color: var(--primary-colour);
-  cursor: pointer; 
+  color: var(--primary-colour) ;
+  cursor: pointer;
 }
 
 .shop__filters button {

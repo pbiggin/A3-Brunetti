@@ -53,11 +53,11 @@ function loadProducts() {
       return matchesType && matchesHalal && matchesGlutenFriendly;
     });
   
-    // Clear the current product list
+   
     const productList = document.getElementById("product-list");
     productList.innerHTML = "";
   
-    // Display the filtered products
+  
     filteredProducts.forEach((product) => {
       const productDiv = document.createElement("div");
       productDiv.classList.add("product");
@@ -74,14 +74,14 @@ function loadProducts() {
     });
   });
   
-  // Clear Filters Button Logic
+
   document.getElementById("clear-filters").addEventListener("click", () => {
-    // Reset all checkboxes
+   
     document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
       checkbox.checked = false;
     });
   
-    // Display all products
+   
     const productList = document.getElementById("product-list");
     productList.innerHTML = "";
   
@@ -101,7 +101,7 @@ function loadProducts() {
     });
   });
   // end of generated code
-  
+
 
 function loadLessProducts() {
     const productList = document.getElementById("product-list");
