@@ -116,7 +116,7 @@ const products = [
     name: "Cookies & Cream Cheesecake",
     type: "standard",
     price: "From: $54.00",
-    image: "../images/Cookies-and-Cream.jpg",
+    image: "../images/cookies-cream.jpg",
     link: "../sites/product-page.html",
     halal: true,
     glutenFriendly: false,
