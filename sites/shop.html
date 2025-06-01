@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../styles/atoms.css" />
     <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/molecules.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/organisms.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/animations.css" />
     <title>Brunetti Classico</title>
   </head>
+  
   <body>
     <!-- alternating messages, stuck to top of page-->
 
@@ -64,42 +69,64 @@
           height="80px"
         />
       </a>
-      <h1 class="margin-md padding-md">Celebration Cakes</h1>
-      
-      <section class="shop__filters">
-        <h2>Filter Products</h2>
-        <form id="filter-form">
-          <!-- Filter by product type -->
-          <fieldset class="filter-wrapper">
-            <label>
-              <input type="checkbox" name="product-type" value="premium" />
-              Premium
-            </label>
-            <label>
-              <input type="checkbox" name="product-type" value="standard" />
-              Standard
-            </label>
-            <label>
-              <input type="checkbox" name="product-type" value="gelato" />
-              Gelato
-            </label>
-            <label>
-              <input type="checkbox" name="halal" value="true" />
-              Halal
-            </label>
-            <label>
-              <input type="checkbox" name="glutenFriendly" value="true" />
-              Gluten Friendly
-            </label>
-          </fieldset>
+      <header class="shop__header">
+        <h1 class="heading">Celebration </br> Cakes</h1>
 
-        </form>
-        <button type="button" id="apply-filters" class="standard-btn">Apply Filters</button>
-        <button type="button" id="clear-filters" class="standard-btn">Clear Filters</button>
-      </section>
+        <section class="shop__filters">
+          <button type="button" id="toggle-filters" class="right">
+            FILTERS
+          </button>
+          <form id="filter-form" class="hidden">
+            <!-- Filter by product type -->
+            <fieldset>
+              <input
+                type="checkbox"
+                id="premium"
+                name="product-type"
+                value="premium"
+              />
+              <label for="premium">Premium</label>
+
+              <input
+                type="checkbox"
+                id="standard"
+                name="product-type"
+                value="standard"
+              />
+              <label for="standard">Standard</label>
+
+              <input
+                type="checkbox"
+                id="gelato"
+                name="product-type"
+                value="gelato"
+              />
+              <label for="gelato">Gelato</label>
+
+              <input type="checkbox" id="halal" name="halal" value="true" />
+              <label for="halal">Halal</label>
+
+              <input
+                type="checkbox"
+                id="glutenFriendly"
+                name="glutenFriendly"
+                value="true"
+              />
+              <label for="glutenFriendly">Gluten Friendly</label>
+            </fieldset>
+            <div class="content-wrapper">
+              <button type="button" id="apply-filters" class="standard-btn">
+                Apply Filters
+              </button>
+              <button type="button" id="clear-filters" class="standard-btn">
+                Clear Filters
+              </button>
+            </div>
+          </form>
+        </section>
+      </header>
 
       <section class="shop__plist" id="product-list"></section>
-
       <button id="load-more" class="standard-btn center">Load More</button>
       <div class="flower-container">
         <svg viewBox="0 0 1110.3 27" class="flower fill-white">
@@ -115,7 +142,6 @@
       </div>
     </main>
     <section class="product__quote">
-
       <article class="content-wrapper">
         <aside class="location__image right">
           <img

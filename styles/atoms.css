@@ -1,0 +1,180 @@
+/** specifics css styles, roots, etc **/
+
+:root {
+  /** COLOURS **/
+  --dominant-colour: #691a32;
+  --primary-colour: #901a50;
+  --primary-accent-colour: #f1cade;
+
+  --secondary-colour: #124861;
+  --secondary-accent-colour: #93dacc;
+
+  --background-colour: #f9f0da;
+  --background-accent: #ebd6a3;
+
+  --border-standard: 2px;
+
+  /** space units **/
+  --space-unit: 1rem;
+  --space-xxs: calc(0.25 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(2 * var(--space-unit));
+  --space-xl: calc(3.25 * var(--space-unit));
+
+  /** font units **/
+  --font-unit: 1.2rem;
+  --font-xxs: calc(0.25 * var(--font-unit));
+  --font-xs: calc(0.5 * var(--font-unit));
+  --font-md: calc(1.15 * var(--font-unit));
+  --font-lg: calc(2 * var(--font-unit));
+  --font-xxl: calc(4 * var(--font-unit));
+
+  /** main font **/
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+
+  /** z-index **/
+  --navigation: 4;
+  --foreground: 3;
+  --midground: 2;
+  --background: 1;
+}
+
+/** typeography **/
+h2 {
+  text-transform: uppercase;
+  font-size: clamp(var(--font-md), 10vw, var(--font-lg));
+  text-align: center;
+}
+
+.heading {
+  text-transform: uppercase;
+  text-wrap: normal;
+  font-size: clamp(var(--font-lg), 5vw, var(--font-xxl));
+  text-align: left;
+  line-height: auto;
+}
+
+.body-text {
+  text-transform: lowercase;
+  text-wrap: normal;
+  font-size: clamp(var(--font-sm), 1.5vw, var(--font-md));
+  text-align: left;
+  line-height: var(--space-lg);
+}
+
+/** utility **/
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.stack > * + * {
+  margin-top: var(--space-md);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+}
+
+.center {
+  box-sizing: content-box;
+  margin: auto;
+  text-align: center;
+}
+
+.left {
+  box-sizing: content-box;
+  margin-right: auto;
+}
+
+.right {
+  box-sizing: content-box;
+  margin-left: auto;
+}
+
+.padding-sm {
+  padding: var(--space-sm);
+}
+
+.padding-md {
+  padding: var(--space-md);
+}
+
+.padding-lg {
+  padding: var(--space-lg);
+}
+
+.margin-md {
+  margin: var(--space-sm);
+}
+
+/** colours **/
+
+.bg-dominant {
+  background-color: var(--dominant-colour);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-colour);
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-primary {
+  color: var(--primary-colour);
+}
+
+.text-secondary {
+  color: var(--secondary-colour);
+}
+
+.fill-accent {
+  fill: var(--primary-accent-colour);
+}
+
+.fill-secondary {
+  fill: var(--secondary-colour);
+}
+
+.fill-white {
+  fill: white;
+}
+
+/** possibly redundant **/
+
+.services--default {
+  background-color: var(--secondary-accent-colour);
+  color: var(--secondary-colour);
+}
+
+.services--alternate {
+  background-color: var(--secondary-colour);
+  color: var(--secondary-accent-colour);
+}
+
+svg {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+  

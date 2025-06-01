@@ -1,0 +1,31 @@
+.shop__filters label:hover {
+    background-color: var(--primary-accent-colour);
+    color: var(--primary-colour);
+    cursor: pointer;
+  }
+  
+  .shop__filters input[type="checkbox"]:checked + label {
+    background-color: var(--primary-accent-colour);
+    color: var(--primary-colour);
+    cursor: pointer;
+  }
+  
+  #apply-filters:hover {
+    background-color: var(--secondary-accent-colour);
+  }
+  
+  #clear-filters:hover {
+    background-color: var(--primary-accent-colour);
+  }
+  
+  
+  .info-box__tab:hover {
+    background-color: var(--dominant-colour);
+    color: var(--primary-accent-colour);
+  }
+  
+  .info-box__tab.active {
+    background-color: var(--dominant-colour);
+    color: var(--primary-accent-colour);
+  }
+  

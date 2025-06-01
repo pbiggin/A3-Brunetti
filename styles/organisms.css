@@ -1,0 +1,282 @@
+/** css rulesets that provide layout structure for the page */
+
+/** general **/
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--background-colour);
+  color: var(--dominant-colour);
+}
+
+.content__text {
+  max-width: 50%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/** announcements **/
+.announcement {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25px;
+  padding-top: var(--space-xxs);
+  padding-bottom: var(--space-xxs);
+  z-index: var(--foreground);
+
+  background-color: var(--dominant-colour);
+  color: var(--primary-accent-colour);
+}
+
+/** navigation **/
+
+.navigation {
+  position: fixed;
+  padding: 5 5 auto auto;
+
+  width: 50%;
+  min-width: fit-content;
+  max-width: 900px;
+  top: 3rem;
+  right: 3rem;
+
+  z-index: var(--navigation);
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: var(--space-sm);
+  border-radius: 30px;
+}
+
+.navigation__container {
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.overlay {
+  position: fixed;
+  flex-direction: column;
+  gap: var(--space-lg);
+  font-size: var(--font-lg);
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: var(--navigation);
+}
+
+.hidden {
+  display: none;
+}
+/** im unsure why this ^^ only works in this one file **/
+
+/** landing **/
+.landing {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  z-index: var(--midground);
+}
+
+.landing__buttons {
+  justify-content: space-between;
+}
+
+.landing__hero {
+  z-index: var(--midground);
+  height: 78vh;
+}
+
+.landing__scroll {
+  flex-direction: row;
+  justify-content: space-around;
+  text-transform: uppercase;
+  background-color: var(--secondary-accent-colour);
+  color: var(--secondary-colour);
+  height: auto;
+  padding: 1ch;
+  z-index: var(--midground);
+}
+
+.landing__background {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  z-index: var(--background);
+}
+
+@media screen and (max-width: 600px) {
+  .landing__background {
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+}
+
+/** about **/
+
+.about {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  padding-right: 2%;
+}
+
+.about__image {
+  position: relative;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  max-width: 50%;
+  min-height: 300px;
+  max-height: 600px;
+  z-index: var(--background);
+}
+
+.about__content {
+  margin-top: 10%;
+  margin-bottom: auto;
+  text-transform: capitalize;
+  max-width: 50ch;
+  z-index: var(--midground);
+}
+
+@media all and (max-width: 600px) {
+  .about {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding-bottom: var(--space-xl);
+  }
+
+  .about__image {
+    max-width: 100%;
+    position: relative;
+    margin-top: -20%;
+  }
+
+  .about .about__content {
+    padding: var(--space-lg);
+    padding-top: var(--space-xl);
+  }
+}
+
+/** product list structure **/
+
+.product__chefs-picks,
+.product__quote {
+  display: grid;
+  background-color: white;
+  padding-top: var(--space-lg);
+  overflow: hidden;
+}
+
+.products__scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: var(--space-md);
+  padding: var(--space-sm);
+}
+
+/** product page structures **/
+
+.item__aside {
+  width: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.item__thumbnail-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+}
+
+@media all and (max-width: 600px) {
+  .item__aside {
+    width: 100%;
+  }
+}
+
+/** proudct list structures **/
+.shop__header {
+  margin: var(--space-xl);
+  margin-top: var(--space-xl);
+  margin-bottom: 0;
+}
+
+.shop__plist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin: var(--space-xl);
+  margin-top: var(--space-sm);
+}
+
+@media all and (max-width: 600px) {
+  .shop__plist {
+    margin: var(--space-md);
+  }
+}
+
+@media all and (max-width: 900px) {
+  .shop__plist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 600px) {
+  .shop__plist {
+    grid-template-columns: 1fr;
+  }
+}
+
+/** locations **/
+
+.store-locations {
+  max-width: 70%;
+  flex: 1;
+}
+
+.locations__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: var(--space-md);
+}
+
+@media all and (max-width: 600px) {
+  .store-locations {
+    width: 100%;
+  }
+
+  .location {
+    flex: 0 0 100%;
+  }
+}
+
+/** footer **/
+.dfooter {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-accent-colour);
+  padding-top: var(--space-xl);
+}
