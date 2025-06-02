@@ -19,7 +19,9 @@
   border-style: none;
   background-color: var(--secondary-colour);
   color: var(--secondary-accent-colour);
+  text-decoration: none;
 }
+
 
 .image-wrapper {
   display: flex;
@@ -265,9 +267,19 @@ svg.fill-secondary {
   margin-bottom: var(--space-xs);
   object-fit: cover;
 }
+@media all and (max-width: 600px) {
+    .product img {
+      width: 100%;
+      max-width: 90vw;
+      height: 100%;
+    }
+  }
+
+ /** scrolls **/
 
 .products__suggestion {
     width: 30%;
+    max-width: 350px;
 }
 
 .products__scroll img {
@@ -275,13 +287,11 @@ svg.fill-secondary {
   border-width: var(--border-standard);
 }
 
-@media all and (max-width: 600px) {
-  .product img {
-    width: 100%;
-    max-width: 90vw;
-    height: 100%;
+.products__scroll a {
+    cursor: pointer;
+    pointer-events: auto; 
   }
-}
+
 
 #services-img--a {
     width: 40%;

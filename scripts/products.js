@@ -388,27 +388,37 @@ const products = [
 const suggestions = [
   {
     name: "Biscoff Gelato Cake",
-    image: "images/Biscoff-Gelato-Cake.jpg",
+    image: "/images/Biscoff-Gelato-Cake.jpg",
     link: "sites/product-page.html",
   },
   {
     name: "Black Forest",
-    image: "images/Black-Forest.jpg",
+    image: "/images/Black-Forest.jpg",
     link: "sites/product-page.html",
   },
   {
     name: "Bombe Alaska Gelato Cake",
-    image: "images/Bombe-Alaska.jpg",
+    image: "/images/Bombe-Alaska.jpg",
     link: "sites/product-page.html",
   },
   {
     name: "Brunetti Classico Rocher",
-    image: "images/Chocolate-Mousse.jpg",
+    image: "/images/Chocolate-Mousse.jpg",
     link: "sites/product-page.html",
   },
   {
     name: "Cassata Siciliana",
-    image: "images/Casata.jpg",
+    image: "/images/Casata.jpg",
+    link: "sites/product-page.html",
+  },
+  {
+    name: "Cassata Siciliana",
+    image: "/images/Casata.jpg",
+    link: "sites/product-page.html",
+  },
+  {
+    name: "Cassata Siciliana",
+    image: "/images/Casata.jpg",
     link: "sites/product-page.html",
   },
 ];

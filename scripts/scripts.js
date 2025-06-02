@@ -1,139 +1,114 @@
 let productsPerPage = 12;
 let currentPage = 0;
-let isExpanded = false
+let isExpanded = false;
+
 
 function loadProducts() {
-    const productList = document.getElementById("product-list");
-    const start = currentPage * productsPerPage;
-    const end = start + productsPerPage;
-    const productsToLoad = products.slice(start, end);
-  
-    productsToLoad.forEach((product) => {
-   
-      const productDiv = document.createElement("div");
-      productDiv.classList.add("product");
-  
-      productDiv.innerHTML = `
+  const productList = document.getElementById("product-list");
+  const start = currentPage * productsPerPage;
+  const end = start + productsPerPage;
+  const productsToLoad = products.slice(start, end);
+
+  productsToLoad.forEach((product) => {
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("product");
+
+    productDiv.innerHTML = `
       <a href="${product.link}" class="product-link"> 
         <img src="${product.image}" alt="${product.name}" />
         <h3>${product.name}</h3>
         <p>${product.price}</p>
       </a>
     `;
-  
-      productList.appendChild(productDiv);
-    });
-  
-    currentPage++;
-  
-    if (currentPage * productsPerPage >= products.length) {
-      document.getElementById("load-more").style.display = "none";
-      isExpanded = true;
-    }
-  }
 
-  document.getElementById("load-more").addEventListener("click", () => {
-    if (isExpanded) {
-      loadLessProducts(); 
-    } else {
-      loadProducts(); 
-    }
+    productList.appendChild(productDiv);
   });
+
+  currentPage++;
+
+  if (currentPage * productsPerPage >= products.length) {
+    document.getElementById("load-more").style.display = "none";
+    isExpanded = true;
+  }
+}
+
+
+document.getElementById("load-more").addEventListener("click", () => {
+  if (isExpanded) {
+    loadLessProducts();
+  } else {
+    loadProducts();
+  }
+});
+
 
 loadProducts();
 
+// USED COPILOT TO ASSIST WITH THIS CODE.
 
-loadSuggestions();
+document.getElementById("apply-filters").addEventListener("click", () => {
+  const selectedType = document.querySelector(
+    'input[name="product-type"]:checked'
+  )?.value;
 
-function loadSuggestions() {
-  const suggestionList = document.getElementById("item-list"); 
+  const halalSelected =
+    document.querySelector('input[name="halal"]:checked') !== null;
+  const glutenFriendlySelected =
+    document.querySelector('input[name="glutenFriendly"]:checked') !== null;
 
-  suggestions.forEach((suggestion) => {
-    const productCard = document.createElement("div");
-    productCard.classList.add("product", "products__suggestion");
+  const filteredProducts = products.filter((product) => {
+    const matchesType = !selectedType || product.type === selectedType;
+    const matchesHalal = !halalSelected || product.halal === true;
+    const matchesGlutenFriendly =
+      !glutenFriendlySelected || product.glutenFriendly === true;
 
-    productCard.innerHTML = `
-      <a href="${suggestion.link}" class="product-link">
-        <img src="${suggestion.image}" alt="${suggestion.name}" />
-        <p>${suggestion.name}</p>
-      </a>
-    `;
-
-    suggestionList.appendChild(productCard);
+    return matchesType && matchesHalal && matchesGlutenFriendly;
   });
-}
 
-loadSuggestions();
+  const productList = document.getElementById("product-list");
+  productList.innerHTML = "";
 
+  filteredProducts.forEach((product) => {
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("product");
 
-  // USED COPILOT TO ASSIST WITH THIS CODE. 
-
-  document.getElementById("apply-filters").addEventListener("click", () => {
-  
-    const selectedType = document.querySelector('input[name="product-type"]:checked')?.value;
-  
-    const halalSelected = document.querySelector('input[name="halal"]:checked') !== null;
-    const glutenFriendlySelected = document.querySelector('input[name="glutenFriendly"]:checked') !== null;
-  
-
-    const filteredProducts = products.filter((product) => {
-      const matchesType = !selectedType || product.type === selectedType;
-      const matchesHalal = !halalSelected || product.halal === true;
-      const matchesGlutenFriendly = !glutenFriendlySelected || product.glutenFriendly === true;
-  
-      return matchesType && matchesHalal && matchesGlutenFriendly;
-    });
-  
- 
-    const productList = document.getElementById("product-list");
-    productList.innerHTML = "";
-  
-   
-    filteredProducts.forEach((product) => {
-      const productDiv = document.createElement("div");
-      productDiv.classList.add("product");
-  
-      productDiv.innerHTML = `
+    productDiv.innerHTML = `
         <a href="${product.link}" class="product-link"> 
           <img src="${product.image}" alt="${product.name}" />
           <h3>${product.name}</h3>
           <p>${product.price}</p>
         </a>
       `;
-  
-      productList.appendChild(productDiv);
-    });
-  });
-  
 
-  document.getElementById("clear-filters").addEventListener("click", () => {
-   
-    document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
-      checkbox.checked = false;
-    });
-  
-   
-    const productList = document.getElementById("product-list");
-    productList.innerHTML = "";
-  
-    products.forEach((product) => {
-      const productDiv = document.createElement("div");
-      productDiv.classList.add("product");
-  
-      productDiv.innerHTML = `
+    productList.appendChild(productDiv);
+  });
+});
+
+document.getElementById("clear-filters").addEventListener("click", () => {
+  document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+    checkbox.checked = false;
+  });
+
+  const productList = document.getElementById("product-list");
+  productList.innerHTML = "";
+
+  products.forEach((product) => {
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("product");
+
+    productDiv.innerHTML = `
         <a href="${product.link}" class="product-link"> 
           <img src="${product.image}" alt="${product.name}" />
           <h3>${product.name}</h3>
           <p>${product.price}</p>
         </a>
       `;
-  
-      productList.appendChild(productDiv);
-    });
+
+    productList.appendChild(productDiv);
   });
+});
 
-  // end of generated code
-
+// end of generated code
 
 function toggleOverlay() {
   const overlay = document.querySelector(".overlay");

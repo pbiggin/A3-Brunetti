@@ -30,3 +30,13 @@
     color: var(--primary-accent-colour);
   }
   
+  a:link {
+    border-color: inherit;
+    text-decoration: none;
+  }
+
+  a:visited {
+    border-color: inherit;
+    text-decoration: none;
+  }
+  
