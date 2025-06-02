@@ -51,6 +51,7 @@
 .content-wrapper {
   display: flex;
   align-items: center;
+  overflow: hidden;
   gap: var(--space-md);
 }
 
@@ -200,8 +201,7 @@
 #mud-cake--quote {
   max-width: 100%;
   min-width: auto;
-  margin-left: -25%;
-  margin-bottom: 20%;
+  transform: translateX(-25%);
   object-fit: cover;
   max-height: 100%;
 }
@@ -209,9 +209,7 @@
 #con-amore--quote {
   max-width: 100%;
   min-width: auto;
-  margin-right: -25%;
-  margin-bottom: 20%;
-  object-fit: cover;
+  transform: translateX(25%);
   max-height: 100%;
 }
 
@@ -464,7 +462,7 @@ svg.fill-secondary {
   box-sizing: border-box;
   padding: var(--space-sm);
   color: var(--primary-colour);
-  width: 50%;
+  min-width: 250px;
 }
 
 .location h3 {
@@ -476,27 +474,32 @@ svg.fill-secondary {
   margin: 0;
 }
 
-.location__image {
-  flex: 0 0 20%;
-  text-align: center;
+
+#locations-image--a > img, #locations-image--b > img {
+  height: 90%;
+  max-width: 350px;
 }
 
-.location__image img {
-  width: 100%;
-  height: auto;
-  max-width: 150px;
+#locations-image--a {
+  transform: translateX(-10%);
 }
+
+#locations-image--b {
+    transform: translateX(10%);
+  }
+
 
 @media all and (max-width: 600px) {
-  .location__image {
-    flex: 0 0 auto;
-    margin-bottom: var(--space-md);
-  }
+    #locations-image--a, #locations-image--b {
+        transform: none;
+        margin: var(--space-md);
+      }
 
-  .two-column-list dt,
-  .two-column-list dd {
-    flex: 0 0 100%;
-  }
+      #locations-image--b {
+        position: absolute;
+        scale: 65%;
+        transform: translate(0%, 50%);
+      }
 }
 
 /** footer **/
@@ -506,7 +509,7 @@ svg.fill-secondary {
 
 @media all and (max-width: 600px) {
     .dfooter__input {
-      width: 80vw;
+      width: 70vw;
     }
   }
   

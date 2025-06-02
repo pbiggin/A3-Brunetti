@@ -9,6 +9,7 @@
 
 * {
   margin: 0;
+  
 }
 
 body {
@@ -43,7 +44,6 @@ body {
 
 .navigation {
   position: fixed;
-  padding: 5 5 auto auto;
 
   width: 50%;
   min-width: fit-content;
@@ -273,6 +273,11 @@ body {
 }
 
 /** product list structures **/
+
+.shop {
+    max-width: 1600px;
+    margin: 0 auto;
+}
 .shop__header {
   margin: var(--space-xl);
   margin-top: var(--space-xl);
@@ -308,14 +313,19 @@ body {
 /** locations **/
 
 .store-locations {
-  max-width: 70%;
+  max-width: max-content;
   flex: 1;
 }
 
+.quote__content {
+    display: grid;
+    padding: var(--space-lg);
+    text-align: center;
+}
+
 .locations__list {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: var(--space-md);
 }
 
@@ -326,6 +336,10 @@ body {
 
   .location {
     flex: 0 0 100%;
+  }
+
+  .locations__list {
+    grid-template-columns: 1fr;
   }
 }
 
