@@ -110,10 +110,6 @@ document.getElementById("clear-filters").addEventListener("click", () => {
 
 // end of generated code
 
-function toggleOverlay() {
-  const overlay = document.querySelector(".overlay");
-  overlay.classList.toggle("hidden");
-}
 
 document.getElementById("toggle-filters").addEventListener("click", () => {
   const filterForm = document.getElementById("filter-form");

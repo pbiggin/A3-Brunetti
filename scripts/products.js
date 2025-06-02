@@ -423,7 +423,7 @@ const suggestions = [
   },
 ];
 
-const productPageSuggestions = [
+const alternatives = [
   {
     name: "Chocolate Mud Cake",
     image: "../images/Mudcake.jpg",

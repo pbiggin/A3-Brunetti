@@ -1,26 +1,10 @@
-function loadSuggestions() {
-  const suggestionList = document.getElementById("item-list");
+function toggleOverlay() {
+    const overlay = document.querySelector(".overlay");
+    overlay.classList.toggle("hidden");
+  }
+  
+  /** used copiliot here to add the momentum feature to  */
 
-  suggestions.forEach((suggestion) => {
-    const productCard = document.createElement("div");
-    productCard.classList.add("product", "products__suggestion");
-
-    productCard.innerHTML = `
-        <a href="${suggestion.link}" class="product-link">
-          <img src="${suggestion.image}" alt="${suggestion.name}" />
-          <p>${suggestion.name}</p>
-        </a>
-      `;
-
-    suggestionList.appendChild(productCard);
-  });
-}
-
-loadSuggestions();
-
-
-
-/** scrollable on desktop */
 
 let outerContainer = document.querySelector(".products__outer-scroll");
 let container = document.querySelector(".products__scroll");
@@ -33,9 +17,9 @@ let startX;
 let x;
 let isDragging = false;
 let dragThreshold = 5;
-let velocity = 0; // Track the velocity of the drag
-let lastX = 0; // Track the last mouse position
-let momentumFrame; // Reference for the momentum animation
+let velocity = 0;
+let lastX = 0; 
+let momentumFrame; 
 
 const disablePointerEvents = () => {
   links.forEach((link) => {
@@ -91,7 +75,7 @@ outerContainer.addEventListener("mousemove", (e) => {
   const movement = Math.abs(x - startX);
   if (movement > dragThreshold) {
     isDragging = true;
-    disablePointerEvents(); // Disable links during drag
+    disablePointerEvents(); 
   }
 
   velocity = x - lastX; // Calculate velocity based on mouse movement
@@ -104,21 +88,11 @@ outerContainer.addEventListener("mousemove", (e) => {
 outerContainer.addEventListener("mouseup", (e) => {
   pressed = false;
   container.style.cursor = "grab";
-  enablePointerEvents(); // Re-enable links after mouseup
-
+  enablePointerEvents(); 
   if (isDragging) {
-    e.preventDefault(); // Prevent click if dragging occurred
-    applyMomentum(); // Start momentum scrolling
+    e.preventDefault(); 
+    applyMomentum(); 
   }
 
-  isDragging = false; // Reset dragging state
-});
-
-container.addEventListener("click", (e) => {
-  console.log("Click event triggered");
-  console.log("Is dragging:", isDragging);
-
-  if (e.target.tagName === "A" && !isDragging) {
-    console.log("Link clicked:", e.target.href);
-  }
+  isDragging = false; 
 });
