@@ -98,6 +98,12 @@ h2 {
   text-align: center;
 }
 
+.headspace {
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+
 .left {
   box-sizing: content-box;
   margin-right: auto;

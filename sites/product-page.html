@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="../styles/atoms.css" />
     <link rel="stylesheet" type="text/css" href="../styles/molecules.css" />
     <link rel="stylesheet" type="text/css" href="../styles/organisms.css" />
-    <link rel="stylesheet" type="text/css" href="styles/animations.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/animations.css" />
     <title>Product Name</title>
   </head>
   <body>
@@ -70,7 +70,6 @@
         <h3>Product Name</h3>
       </div>
       <section class="content-wrapper">
-
         <aside class="item__aside">
           <div id="item__image" class="image-wrapper">
             <img src="../images/placeholder.webp" alt="Main Product Image" />
@@ -96,7 +95,7 @@
           <label for="portion-size" class="dropdown-label"
             >Select Portion Size:</label
           >
-          <select id="portion-size" class="dropdown margin-md">
+          <select id="portion-size" class="dropdown center headspace standard-input">
             <option value="6">6 Portions</option>
             <option value="8">8 Portions</option>
             <option value="10">10 Portions</option>
@@ -107,9 +106,7 @@
       </section>
     </main>
     <section class="product__information center">
-
       <div class="info-box center pad">
-
         <div class="info-box__tabs cluster">
           <button class="info-box__tab" id="dietary">DIETARY</button>
           <button class="info-box__tab" data-tab="flavours">FLAVOURS</button>
@@ -142,22 +139,9 @@
 
     <section class="products__others">
       <h2 class="left padding-lg text-primary">You may also like...</h2>
-      <div class="products__scroll">
-        <div class="product products__suggestion">
-          <img src="../images/placeholder.webp" alt="Product 1" />
-          <p>Product 1</p>
-        </div>
-        <div class="product products__suggestion">
-          <img src="../images/placeholder.webp" alt="Product 2" />
-          <p>Product 2</p>
-        </div>
-        <div class="product products__suggestion">
-          <img src="../images/placeholder.webp" alt="Product 3" />
-          <p>Product 3</p>
-        </div>
-        <div class="product products__suggestion">
-          <img src="../images/placeholder.webp" alt="Product 4" />
-          <p>Product 4</p>
+      <div class="products__outer-scroll">
+        <div id="item-list" class="products__scroll">
+          <!-- Suggestions will load here dynamically -->
         </div>
       </div>
     </section>
@@ -177,15 +161,17 @@
 
     <footer class="dfooter">
       <div class="center padding-md">
-        <img
-          class="margin-md logo"
-          src="../images/brunetti-logo.png"
-          width="200px"
-        />
+        <a href="../index.html">
+          <img
+            class="margin-md logo"
+            src="../images/brunetti-logo.png"
+            width="200px"
+          />
+        </a>
         <h3>Join our mailing list</h3>
         <input
           type="text"
-          class="dfooter__input center margin-md"
+          class="dfooter__input standard-btn center margin-md"
           placeholder="Enter your email address"
         />
       </div>
@@ -199,7 +185,8 @@
         <p>© Brunetti Classico 2025</p>
       </div>
     </footer>
-    <script src="../scripts/scripts.js"></script>
-    <script src="../scripts/products.js"></script>
+    <script type="text/javascript" src="../scripts/scripts.js"></script>
+    <script type="text/javascript" src="../scripts/products.js"></script>
+    <script type="text/javascript" src="../scripts/carousels.js"></script>
   </body>
 </html>

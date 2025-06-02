@@ -75,13 +75,12 @@ const applyMomentum = () => {
   }
 };
 
+
 outerContainer.addEventListener("mousedown", (e) => {
   e.preventDefault();
   pressed = true;
   startX = e.clientX - container.offsetLeft;
-  lastX = e.clientX; // Initialize lastX for velocity calculation
   container.style.cursor = "grabbing";
-  isDragging = false; // Reset dragging state
 });
 
 outerContainer.addEventListener("mousemove", (e) => {

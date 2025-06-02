@@ -422,3 +422,31 @@ const suggestions = [
     link: "sites/product-page.html",
   },
 ];
+
+const productPageSuggestions = [
+  {
+    name: "Chocolate Mud Cake",
+    image: "../images/Mudcake.jpg",
+    link: "../sites/product-page.html",
+  },
+  {
+    name: "Cookies & Cream Cheesecake",
+    image: "../images/cookies-cream.jpg",
+    link: "../sites/product-page.html",
+  },
+  {
+    name: "Mixed Berry Charlotte",
+    image: "../images/Mixed-Berry-Charlotte.jpg",
+    link: "../sites/product-page.html",
+  },
+  {
+    name: "New York Cheesecake",
+    image: "../images/New-York-Cheesecake.jpg",
+    link: "../sites/product-page.html",
+  },
+  {
+    name: "Strawberry Cheesecake Gelato Cake",
+    image: "../images/Strawberry-Gelato-Cheesecake.jpg",
+    link: "../sites/product-page.html",
+  },
+];
