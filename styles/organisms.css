@@ -207,7 +207,7 @@ body {
   color: var(--secondary-accent-colour);
 }
 
-@media screen and (max-width: 600px) {
+@media all and (max-width: 600px) {
   .services--default,
   .services--alternate {
     padding: var(--space-lg);
@@ -280,8 +280,13 @@ body {
 }
 .shop__header {
   margin: var(--space-xl);
-  margin-top: var(--space-xl);
   margin-bottom: 0;
+}
+
+@media all and (max-width: 600px) {
+  .shop__header {
+    margin: var(--space-lg);
+  }
 }
 
 .shop__plist {
