@@ -68,6 +68,12 @@ h2 {
   line-height: var(--space-lg);
 }
 
+.small-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  margin-left: 0.5rem;
+}
+
 /** utility **/
 
 .stack {
@@ -175,3 +181,12 @@ svg {
     height: auto;
   }
   
+
+/** adobe svg generated styles **/
+/** cart icon **/
+.st0 {
+  fill: none;
+  stroke: #231f20;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
