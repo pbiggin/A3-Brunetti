@@ -25,7 +25,9 @@
 .standard-input {
   display: block;
   padding: 1rem;
-  width: 30rem;
+  min-width: 15%;
+  width: 90%;
+  max-width: 100%;
   text-align: center;
   background-color: white;
 
@@ -36,15 +38,54 @@
   color: var(--dominant-colour);
 }
 
+
+.dropdown-input {
+  position: absolute;
+  display: block;
+  min-width: 15%;
+  width: 90%;
+  transform: translateX(5%);
+  max-width: 100%;
+  text-align: left;
+  background-color: white;
+  text-transform: capitalize;
+  color: var(--dominant-colour);
+  z-index: var(--midground);
+}
+
+.dropdown-input > ul {
+  padding: 0;
+}
+
+.dropdown-item {
+  padding: var(--space-sm);
+  list-style-type: none;
+  cursor: pointer;
+}
+
+
+.dropdown-item:hover {
+ background-color: var(--primary-accent-colour);
+}
+
+
+
 .image-wrapper {
   display: flex;
   overflow: hidden;
   border-radius: 30px;
 }
 
+#item-layout {
+ gap: 0;
+ justify-content: center;
+}
+
 .image-wrapper > img {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 .content-wrapper {
@@ -241,7 +282,7 @@
   }
 }
 
-svg.fill-secondary {
+.bg-white .fill-secondary {
   transform: rotate(180deg);
   margin-top: -1px;
 }
@@ -331,7 +372,7 @@ svg.fill-secondary {
 
 .filter__buttons {
   display: flex;
-  justify-content: ;
+  justify-content:flex-end;
   align-items: center;
   margin-bottom: var(--space-sm);
 }
@@ -360,12 +401,7 @@ svg.fill-secondary {
 }
 
 @media all and (max-width: 600px) {
-  .shop__filters {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-sm);
-  }
+  
   .shop__filters fieldset {
     flex-wrap: wrap;
     justify-content: center;
@@ -447,14 +483,16 @@ svg.fill-secondary {
 
 #item__image {
   width: 100%;
+  max-width: 600px;
   aspect-ratio: 1 / 1;
 }
 
-#item__image > img {
-  object-fit: contain;
-}
-
 @media all and (max-width: 600px) {
+
+  #item__image > img, .item__thumbnail > img {
+    height: 100%;
+  }
+
   .image-wrapper.item__thumbnail {
     width: 30%;
     margin-bottom: var(--space-sm);
@@ -488,6 +526,8 @@ svg.fill-secondary {
   border: none;
   cursor: pointer;
 }
+
+
 
 .info-box__content {
   padding: var(--space-lg);
