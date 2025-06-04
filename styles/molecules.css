@@ -7,6 +7,7 @@
   width: 15rem;
   text-align: center;
   background-color: white;
+  text-transform: uppercase;
 
   border-style: solid;
   border-width: var(--border-standard);
@@ -36,6 +37,18 @@
   border-radius: 60rem;
   border-color: var(--dominant-colour);
   color: var(--dominant-colour);
+}
+
+.borderless-input {
+  display: block;
+  padding: 1rem;
+  min-width: 15%;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border-radius: 60rem;
+  border: none;
+  margin: var(--space-xs);
 }
 
 
@@ -539,6 +552,15 @@
 }
 
 .info-box__section.active {
+  display: block;
+}
+
+/** checkout **/
+.checkout__pickup {
+  width: 95%;
+  margin: var(--space-sm);
+  border-radius: 15px;
+  background-color: var(--secondary-accent-colour);
   display: block;
 }
 

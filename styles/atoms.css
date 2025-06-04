@@ -98,6 +98,11 @@ h2 {
   flex-direction: row;
 }
 
+.space-btwn {
+  display: flex;
+  justify-content: space-between;
+}
+
 .center {
   box-sizing: content-box;
   margin: auto;
@@ -113,11 +118,13 @@ h2 {
 .left {
   box-sizing: content-box;
   margin-right: auto;
+  text-align: left;
 }
 
 .right {
   box-sizing: content-box;
   margin-left: auto;
+  text-align: right;
 }
 
 .padding-sm {
@@ -147,6 +154,10 @@ h2 {
 
 .bg-secondary {
   background-color: var(--secondary-colour);
+}
+
+.bg-secondary-accent {
+  background-color: var(--secondary-accent-colour);
 }
 
 .bg-white {

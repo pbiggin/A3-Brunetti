@@ -15,24 +15,105 @@
     <link rel="stylesheet" type="text/css" href="../styles/organisms.css" />
     <link rel="stylesheet" type="text/css" href="../styles/animations.css" />
 
-    <title>Checkout</title>
+    <title>Your Cart</title>
   </head>
   <body>
     <div class="announcement">
       <p>announcement</p>
     </div>
-    <main>
-        <a href="../index.html">
-            <img
-              class="logo padding-md"
-              src="../images/brunetti-logo.png"
-              width="auto"
-              height="80px"
-            />
-          </a>
-        <p> CHEKCOUT</p>
+    <main class="checkout">
+      <a href="../index.html">
+        <img
+          class="logo padding-md"
+          src="../images/brunetti-logo.png"
+          width="auto"
+          height="80px"
+        />
+      </a>
+      <div class="checkout__info">
+        <main class="checkout__form padding-md margin-md">
+          <h3 class="margin-md">Contact</h3>
+          <form id="contact-form" class="contact__form">
+            <div class="form-group">
+              <input
+                class="borderless-input"
+                type="text"
+                id="first-name"
+                name="first-name"
+                placeholder="First name"
+                required
+              />
+              <input
+                class="borderless-input"
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Last name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                class="borderless-input"
+                type="text"
+                id="company-name"
+                name="company-name"
+                placeholder="Company Name (Optional)"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                class="borderless-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                class="borderless-input"
+                type="tel"
+                id="phone-number"
+                name="phone-number"
+                placeholder="Enter your phone number"
+                required
+              />
+            </div>
+            <label for="address" class="margin-md">Billing Details</label>
+            <div class="form-group">
+              <input
+                class="borderless-input"
+                type="address"
+                id="address"
+                name="address"
+                placeholder="Enter a address"
+                required
+              />
+            </div>
+          </form>
+        </main>
+        <aside>
+          <div class="pickup-details">
+            <h3>Pickup details</h3>
+            <h2>380 Lygon Street, Carlton, 3035</h2>
+            <h2>10-04-2025</h2>
+            <h2>10:00am</h2>
+          </div>
+
+          <div class="order-summary">
+            <h3>Order summary</h3>
+            <p>Total</p>
+            <p id="cart-total">$0.00</p>
+          </div>
+          <button type="button" id="submit-button" class="standard-btn center">
+            Next
+          </button>
+        </aside>
+      </div>
     </main>
-    <div class="flower-container">
+    <div class="flower-container end">
       <svg viewBox="0 0 1110.3 27" class="flower fill-secondary">
         <defs>
           <path class="st0" d="M38.3-21.8" />
@@ -44,5 +125,6 @@
         <use xlink:href="#flower-border" />
       </svg>
     </div>
+    <script type="text/javascript" src="../scripts/general.js"></script>
   </body>
 </html>

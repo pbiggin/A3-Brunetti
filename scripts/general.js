@@ -1,4 +1,4 @@
-//** used Copiliot to reorganise functions to work on all pages */
+//** used Copiliot to reorganise functions (via initialization) to work on all pages */
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeCart();
@@ -23,13 +23,40 @@ function initializeCart() {
     return; // Exit if cart elements are not present
   }
 
-  const cart = [];
-  const confirmationTextId = "confirmation-text";
+  // Retrieve cart data from localStorage
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Update cart display
+  function updateCart() {
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} - ${item.portion} - $${item.price.toFixed(2)}`;
+      const removeBtn = document.createElement("button");
+      removeBtn.textContent = "Remove";
+      removeBtn.classList.add("remove-btn");
+      removeBtn.addEventListener("click", () => {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+        updateCart();
+      });
+      li.appendChild(removeBtn);
+      cartItems.appendChild(li);
+      total += item.price;
+    });
+
+    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+  }
+
+  // Initialize cart display
+  updateCart();
 
   // Add item to cart
   orderButton.addEventListener("click", () => {
     const productName = document.querySelector(".content__text h2").textContent;
-    const productPrice = 65.0;
+    const productPrice = 65.0; // Example price, replace with dynamic value if needed
     const portionSize = document.getElementById("portion-size").textContent;
 
     if (portionSize === "Select Portion Size") {
@@ -41,12 +68,15 @@ function initializeCart() {
       name: productName,
       price: productPrice,
       portion: portionSize,
+      image: "../images/placeholder.webp", // Replace with dynamic image URL if needed
     };
 
     cart.push(cartItem);
+    localStorage.setItem("cart", JSON.stringify(cart)); // Save updated cart to localStorage
     updateCart();
 
     // Display confirmation text below the "ORDER NOW" button
+    const confirmationTextId = "confirmation-text";
     let confirmationText = document.getElementById(confirmationTextId);
     if (!confirmationText) {
       confirmationText = document.createElement("p");
@@ -67,29 +97,6 @@ function initializeCart() {
     }, 3000);
   });
 
-  // Update cart display
-  function updateCart() {
-    cartItems.innerHTML = "";
-    let total = 0;
-
-    cart.forEach((item, index) => {
-      const li = document.createElement("li");
-      li.textContent = `${item.name} - ${item.portion} - $${item.price.toFixed(2)}`;
-      const removeBtn = document.createElement("button");
-      removeBtn.textContent = "Remove";
-      removeBtn.classList.add("remove-btn");
-      removeBtn.addEventListener("click", () => {
-        cart.splice(index, 1);
-        updateCart();
-      });
-      li.appendChild(removeBtn);
-      cartItems.appendChild(li);
-      total += item.price;
-    });
-
-    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
-  }
-
   // Show cart on hover
   cartButton.addEventListener("mouseenter", () => {
     cartContainer.classList.remove("hidden");
@@ -103,7 +110,6 @@ function initializeCart() {
     cartContainer.classList.add("hidden");
   });
 }
-
 /**
  * Initializes the product scroll functionality.
  */
@@ -219,3 +225,89 @@ function initializeOverlayToggle() {
     overlay.classList.toggle("hidden");
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cartItemsContainer = document.getElementById("cart-items-container");
+  const cartCount = document.getElementById("cart-count");
+  const cartTotal = document.getElementById("cart-total");
+
+  if (!cartItemsContainer || !cartCount || !cartTotal) {
+    console.error("Cart elements not found!");
+    return;
+  }
+
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Update cart count
+  cartCount.textContent = cart.length;
+
+  // Display cart items
+  if (cart.length === 0) {
+    cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+    cartTotal.textContent = "Total: $0.00";
+  } else {
+    cartItemsContainer.innerHTML = ""; // Clear container
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      const cartItemDiv = document.createElement("div");
+      cartItemDiv.classList.add("cart-item");
+
+      cartItemDiv.innerHTML = `
+        <img src="${item.image}" alt="${item.name}" class="cart-item-image" />
+        <div class="cart-item-details">
+          <h3>${item.name}</h3>
+          <p>Portion: ${item.portion}</p>
+          <p>Price: $${item.price.toFixed(2)}</p>
+        </div>
+        <button class="remove-btn">Remove</button>
+      `;
+
+      const removeBtn = cartItemDiv.querySelector(".remove-btn");
+      removeBtn.addEventListener("click", () => {
+        cart.splice(index, 1); // Remove item from cart array
+        localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+        updateCart(); // Refresh cart display
+      });
+
+      cartItemsContainer.appendChild(cartItemDiv);
+      total += item.price;
+    });
+
+    cartTotal.textContent = `$${total.toFixed(2)}`;
+  }
+
+  // Function to refresh cart display
+  function updateCart() {
+    cartItemsContainer.innerHTML = ""; // Clear container
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      const cartItemDiv = document.createElement("div");
+      cartItemDiv.classList.add("cart-item");
+
+      cartItemDiv.innerHTML = `
+        <img src="${item.image}" alt="${item.name}" class="cart-item-image" />
+        <div class="cart-item-details">
+          <h3>${item.name}</h3>
+          <p>Portion: ${item.portion}</p>
+          <p>Price: $${item.price.toFixed(2)}</p>
+        </div>
+        <button class="remove-btn">Remove</button>
+      `;
+
+      const removeBtn = cartItemDiv.querySelector(".remove-btn");
+      removeBtn.addEventListener("click", () => {
+        cart.splice(index, 1); // Remove item from cart array
+        localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+        updateCart(); // Refresh cart display
+      });
+
+      cartItemsContainer.appendChild(cartItemDiv);
+      total += item.price;
+    });
+
+    cartTotal.textContent = `$${total.toFixed(2)}`;
+    cartCount.textContent = cart.length; // Update cart count
+  }
+});
