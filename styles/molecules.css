@@ -609,6 +609,34 @@ a.standard-btn--alternate {
     padding: var(--space-md);
 }
 
+
+/** generated with copilot **/
+
+@media (max-width: 600px) {
+  .order-confirm {
+    grid-template-columns: 1fr;
+    padding: 15px;
+    margin: 10px;
+    max-width: 100%; /* Full width for smaller screens */
+  }
+
+  .order-confirm card {
+    margin-bottom: 15px;
+  }
+
+  .order-confirm h1,
+  .order-confirm h3,
+  .order-confirm p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .order-confirm img.direction-image {
+    max-width: 100%; /* Ensure the image scales properly */
+    height: auto;
+  }
+
+}
+
 .direction-image {
   margin: var(--space-sm);
   width: 90%;
