@@ -1,69 +1,62 @@
 /** css styles for components, or 'molecules' of mutliple elements but not full sections or layout**/
 
 /** general **/
-.standard-btn {
+.standard-btn,
+.shop__filters button {
   display: block;
   padding: 1rem;
   width: 15rem;
   text-align: center;
+  border-radius: 60rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.standard-btn {
   background-color: white;
   text-transform: uppercase;
-
-  border-style: solid;
-  border-width: var(--border-standard);
-  border-radius: 60rem;
-  border-color: var(--dominant-colour);
+  border: solid var(--border-standard) var(--dominant-colour);
   color: var(--dominant-colour);
 }
 
 .standard-btn--alternate {
-  border-style: none;
+  border: none;
   background-color: var(--secondary-colour);
   color: var(--secondary-accent-colour);
-  text-decoration: none;
 }
 
-.standard-input {
+.standard-input,
+.borderless-input {
   display: block;
   padding: 1rem;
-  min-width: 15%;
-  width: 90%;
+  width: 85%;
   max-width: 100%;
   text-align: center;
   background-color: white;
-
-  border-style: solid;
-  border-width: var(--border-standard);
   border-radius: 60rem;
-  border-color: var(--dominant-colour);
+}
+
+.standard-input {
+  border: solid var(--border-standard) var(--dominant-colour);
   color: var(--dominant-colour);
 }
 
 .borderless-input {
-  display: block;
-  padding: 1rem;
-  min-width: 15%;
-  width: 100%;
-  text-align: center;
-  background-color: white;
-  border-radius: 60rem;
   border: none;
   margin: var(--space-xs);
 }
 
-
 .dropdown-input {
   position: absolute;
   display: block;
-  min-width: 15%;
   width: 90%;
   transform: translateX(5%);
-  max-width: 100%;
   text-align: left;
   background-color: white;
   text-transform: capitalize;
   color: var(--dominant-colour);
   z-index: var(--midground);
+  border-radius: 15px;
 }
 
 .dropdown-input > ul {
@@ -76,12 +69,9 @@
   cursor: pointer;
 }
 
-
 .dropdown-item:hover {
- background-color: var(--primary-accent-colour);
+  background-color: var(--primary-accent-colour);
 }
-
-
 
 .image-wrapper {
   display: flex;
@@ -90,8 +80,8 @@
 }
 
 #item-layout {
- gap: 0;
- justify-content: center;
+  gap: 0;
+  justify-content: center;
 }
 
 .image-wrapper > img {
@@ -176,7 +166,6 @@
   text-align: right;
   align-content: end;
   font-size: var(--font-lg);
-  padding-bottom: var(--space-xl);
   color: white;
   text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.48);
 }
@@ -304,8 +293,6 @@
 .product {
   flex: 0 0 auto;
   text-align: center;
-  height: min-content;
-  text-align: center;
   margin: var(--space-xxs);
   border-radius: 8px;
 }
@@ -324,17 +311,15 @@
 
 .product img {
   aspect-ratio: 1.36 / 1;
-  height: auto;
   width: 100%;
   border-radius: 15px;
   margin-bottom: var(--space-xs);
   object-fit: cover;
 }
+
 @media all and (max-width: 600px) {
   .product img {
-    width: 100%;
     max-width: 90vw;
-    height: 100%;
   }
 }
 
@@ -346,8 +331,7 @@
 }
 
 .products__scroll img {
-  border: solid;
-  border-width: var(--border-standard);
+  border: solid var(--border-standard);
 }
 
 .products__scroll a {
@@ -393,13 +377,9 @@
 .shop__filters fieldset {
   border: none;
   display: flex;
-  width: 100%;
-  flex-direction: space-around;
   gap: var(--space-sm);
-  margin-inline: 0;
-  padding-block: 0;
-  padding-inline: 0;
-  min-inline-size: min-content;
+  margin: 0;
+  padding: 0;
 }
 
 .shop__filters label {
@@ -413,8 +393,13 @@
   border-radius: 30px;
 }
 
+.shop__filters input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 @media all and (max-width: 600px) {
-  
   .shop__filters fieldset {
     flex-wrap: wrap;
     justify-content: center;
@@ -426,43 +411,21 @@
     padding: var(--space-xs);
     margin: var(--space-xs) 0;
   }
-
-  .shop__filters input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
-.shop__filters input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .shop__filters button {
-  display: block;
-  width: 15rem;
-  padding: var(--space-sm);
   border: none;
-  border-radius: 30px;
-  cursor: pointer;
 }
 
 #toggle-filters {
   background-color: white;
-  border: solid;
-  border-color: var(--secondary-colour);
+  border: solid var(--border-standard) var(--secondary-colour);
   color: var(--secondary-colour);
-  border-width: var(--border-standard);
-  box-sizing: content-box;
   margin-left: auto; 
 }
 
-
 @media all and (max-width: 600px) {
   #toggle-filters {
-    box-sizing: content-box;
     margin: auto;
     text-align: center;
   }
@@ -525,7 +488,7 @@
 .info-box__tabs {
   display: flex;
   justify-content: space-around;
-  background-color: var(--background-accent);
+  background-color: var(--primary-accent-colour);
   border-bottom: var(--border-standard) solid var(--dominant-colour);
 }
 
@@ -535,12 +498,11 @@
   text-align: center;
   font-size: var(--font-md);
   font-weight: bold;
-  color: var(--dominant-colour);
+  background: var(--background-accent);
   border: none;
+  color: var(--dominant-colour);
   cursor: pointer;
 }
-
-
 
 .info-box__content {
   padding: var(--space-lg);
@@ -630,4 +592,24 @@
   padding-top: 0.4%;
   padding-bottom: 0%;
   justify-content: space-around;
+}
+
+.footer--flower {
+  height: 10vh;
+  align-content: flex-end;
+}
+
+.order-confirm {
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+    margin: var(--space-xl);
+    padding: var(--space-md);
+}
+
+.direction-image {
+  margin: var(--space-sm);
+  width: 90%;
+  aspect-ratio: 1.3 / 1;
+  border-radius: 30px;
 }

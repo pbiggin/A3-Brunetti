@@ -1,20 +1,19 @@
-/** specifics css styles, roots, etc **/
-
+/** Root Variables **/
 :root {
-  /** COLOURS **/
+  /** Colors **/
   --dominant-colour: #691a32;
   --primary-colour: #901a50;
   --primary-accent-colour: #f1cade;
-
   --secondary-colour: #124861;
   --secondary-accent-colour: #93dacc;
-
   --background-colour: #f9f0da;
   --background-accent: #ebd6a3;
 
+  /** Borders **/
   --border-standard: 2px;
+  --border-radius: 15px;
 
-  /** space units **/
+  /** Spacing **/
   --space-unit: 1rem;
   --space-xxs: calc(0.25 * var(--space-unit));
   --space-xs: calc(0.5 * var(--space-unit));
@@ -23,29 +22,29 @@
   --space-lg: calc(2 * var(--space-unit));
   --space-xl: calc(3.25 * var(--space-unit));
 
-  /** font units **/
+  /** Fonts **/
   --font-unit: 1.2rem;
   --font-xxs: calc(0.25 * var(--font-unit));
   --font-xs: calc(0.5 * var(--font-unit));
+  --font-sm: calc(0.70 * var(--font-unit));
   --font-md: calc(1.15 * var(--font-unit));
   --font-lg: calc(2 * var(--font-unit));
   --font-xxl: calc(4 * var(--font-unit));
 
-  /** main font **/
-
+  /** Font Family **/
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
   text-transform: uppercase;
 
-  /** z-index **/
+  /** Z-Index **/
   --navigation: 4;
   --foreground: 3;
   --midground: 2;
   --background: 1;
 }
 
-/** typeography **/
+/** Typography **/
 h2 {
   text-transform: uppercase;
   font-size: clamp(var(--font-md), 10vw, var(--font-lg));
@@ -54,15 +53,12 @@ h2 {
 
 .heading {
   text-transform: uppercase;
-  text-wrap: normal;
   font-size: clamp(var(--font-lg), 5vw, var(--font-xxl));
   text-align: left;
-  line-height: auto;
 }
 
 .body-text {
   text-transform: lowercase;
-  text-wrap: auto;
   font-size: clamp(var(--font-sm), 1.5vw, var(--font-md));
   text-align: left;
   line-height: var(--space-lg);
@@ -74,17 +70,10 @@ h2 {
   margin-left: 0.5rem;
 }
 
-/** utility **/
-
+/** Utility Classes **/
 .stack {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-}
-
-.stack > * {
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .stack > * + * {
@@ -95,7 +84,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-direction: row;
 }
 
 .space-btwn {
@@ -104,25 +92,20 @@ h2 {
 }
 
 .center {
-  box-sizing: content-box;
   margin: auto;
   text-align: center;
 }
 
 .headspace {
-    margin-top: var(--space-md);
-    margin-bottom: var(--space-md);
+  margin: var(--space-md) 0;
 }
 
-
 .left {
-  box-sizing: content-box;
   margin-right: auto;
   text-align: left;
 }
 
 .right {
-  box-sizing: content-box;
   margin-left: auto;
   text-align: right;
 }
@@ -138,6 +121,7 @@ h2 {
 .padding-lg {
   padding: var(--space-lg);
 }
+
 .padding-xl {
   padding: var(--space-xl);
 }
@@ -146,8 +130,7 @@ h2 {
   margin: var(--space-sm);
 }
 
-/** colours **/
-
+/** Colors **/
 .bg-dominant {
   background-color: var(--dominant-colour);
 }
@@ -184,17 +167,14 @@ h2 {
   fill: white;
 }
 
+/** SVG Styling **/
 svg {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
-  }
-  
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-/** adobe svg generated styles **/
-/** cart icon **/
+/** Adobe SVG Generated Styles **/
 .st0 {
   fill: none;
   stroke: #231f20;

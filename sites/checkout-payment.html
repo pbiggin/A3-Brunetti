@@ -35,69 +35,46 @@
           <main class="checkout__form padding-md margin-md">
             <a href="cart.html">Back to cart</a>
             <h2 class="left headspace">Checkout</h2>
-            <h3 class="margin-md">Contact</h3>
+            <h3 class="margin-md">Credit / debit Card</h3>
             <form id="contact-form" class="contact__form">
-              <div class="form-group">
-                <input
-                  class="borderless-input"
-                  type="text"
-                  id="first-name"
-                  name="first-name"
-                  placeholder="First name"
-                  required
-                />
-                <input
-                  class="borderless-input"
-                  type="text"
-                  id="last-name"
-                  name="last-name"
-                  placeholder="Last name"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  class="borderless-input"
-                  type="text"
-                  id="company-name"
-                  name="company-name"
-                  placeholder="Company Name (Optional)"
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  class="borderless-input"
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  class="borderless-input"
-                  type="tel"
-                  id="phone-number"
-                  name="phone-number"
-                  placeholder="Enter your phone number"
-                  required
-                />
-              </div>
-            </form>
-            <form class="headspace">
-              <label for="address" class="margin-md">Billing Details</label>
               <div class="form-group">
                 <input
                   class="borderless-input"
                   type="address"
                   id="address"
                   name="address"
-                  placeholder="Enter a address"
+                  placeholder="Card Number"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="borderless-input"
+                  type="address"
+                  id="address"
+                  name="address"
+                  placeholder="Expiry date / CVV"
                   required
                 />
               </div>
             </form>
+            <p class="body-text headspace">
+              Your personal data will be used to process your order, support
+              your experience throughout this website, and for other purposes
+              described in our privacy policy.
+            </p>
+            <div class="padding-md">
+              <label for="terms-checkbox" class="terms-label">
+                <input
+                  type="checkbox"
+                  id="terms-checkbox"
+                  name="terms-checkbox"
+                  required
+                />
+                I have read and agree to the website's terms and conditions
+              </label>
+            </div>
+            <a class="sta"href="checkout.html"> Back to Details </a>
           </main>
           <aside>
             <div class="pickup-details">
@@ -113,30 +90,30 @@
               <p id="cart-total">$0.00</p>
             </div>
             <a
+              href="order-sucess.html"
               id="submit-button"
-              href="/sites/checkout-payment.html"
-              class="standard-btn center headspace"
+              class="standard-btn standard-btn--alternate center headspace"
               disabled
             >
-              Next
+              Place order
           </a>
           </aside>
         </div>
       </header>
       <footer class="footer--flower">
-      <div class="flower-container">
-        <svg viewBox="0 0 1110.3 27" class="flower fill-secondary">
-          <defs>
-            <path class="st0" d="M38.3-21.8" />
-            <path
-              id="flower-border"
-              d="M1978.8,27.1l-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0h0c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.1,0h0c-34-34-89.1-34-123.1,0l-.3.3-.3-.3c-34-34-89.1-34-123.1,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3C89.4-7.2,34.3-7.2.3,26.8l-.3.3"
-            />
-          </defs>
-          <use xlink:href="#flower-border" />
-        </svg>
-      </div>
-    </footer>
+        <div class="flower-container">
+          <svg viewBox="0 0 1110.3 27" class="flower fill-secondary">
+            <defs>
+              <path class="st0" d="M38.3-21.8" />
+              <path
+                id="flower-border"
+                d="M1978.8,27.1l-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0h0c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3c-34-34-89.1-34-123.1,0h0c-34-34-89.1-34-123.1,0l-.3.3-.3-.3c-34-34-89.1-34-123.1,0l-.3.3-.3-.3c-34-34-89.1-34-123.2,0l-.3.3-.3-.3C89.4-7.2,34.3-7.2.3,26.8l-.3.3"
+              />
+            </defs>
+            <use xlink:href="#flower-border" />
+          </svg>
+        </div>
+      </footer>
     </main>
     <script type="text/javascript" src="../scripts/general.js"></script>
   </body>

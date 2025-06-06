@@ -385,41 +385,51 @@ const products = [
   },
 ];
 
+const productImages = {
+  "Biscoff Gelato Cake": "/images/Biscoff-Gelato-Cake.jpg",
+  "Black Forest": "/images/Black-Forest.jpg",
+  "Bombe Alaska Gelato Cake": "/images/Bombe-alaska.jpg",
+  "Brunetti Classico Rocher": "/images/Brunetti-rocher.jpg",
+  "Cassata Siciliana": "/images/Casata.jpg",
+  "Choc Berry Slice": "/images/Choc-berry-slice.jpg",
+  "Chocolate Mousse Cake": "/images/Chocolate-Mousse-Cake.jpg",
+};
+
 const suggestions = [
   {
     name: "Biscoff Gelato Cake",
     image: "images/Biscoff-Gelato-Cake.jpg",
-    link: "sites/product-page.html",
+    link: "sites/cake-pages/biscoff.html",
   },
   {
     name: "Black Forest",
     image: "images/Black-Forest.jpg",
-    link: "sites/product-page.html",
+    link: "sites/cake-pages/black-forest.html",
   },
   {
     name: "Bombe Alaska Gelato Cake",
     image: "images/Bombe-Alaska.jpg",
-    link: "sites/product-page.html",
+    link: "sites/cake-pages/bombe-alaska.html",
   },
   {
     name: "Brunetti Classico Rocher",
     image: "images/Chocolate-Mousse.jpg",
-    link: "sites/product-page.html",
+    link: "sites/cake-pages/brunetti-rocher.html",
   },
   {
     name: "Cassata Siciliana",
     image: "images/Casata.jpg",
-    link: "sites/product-page.html",
+    link: "sites/cake-pages/cassata.html",
   },
   {
     name: "Cassata Siciliana",
     image: "images/Casata.jpg",
-    link: "sites/product-page.html",
+    link: "sites/cake-pages/biscoff.html",
   },
   {
     name: "Cassata Siciliana",
     image: "images/Casata.jpg",
-    link: "sites/product-page.html",
+    link: "sites/cake-pages/biscoff.html",
   },
 ];
 
