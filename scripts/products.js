@@ -398,13 +398,13 @@ const products = [
 ];
 
 const productImages = {
-  "Biscoff Gelato Cake": "A3-Brunetti/images/Biscoff-Gelato-Cake.jpg",
-  "Black Forest": "A3-Brunetti/images/Black-Forest.jpg",
-  "Bombe Alaska Gelato Cake": "A3-Brunetti/images/Bombe-Alaska.jpg",
-  "Brunetti Classico Rocher": "A3-Brunetti/images/Brunetti-Rocher.jpg",
-  "Cassata Siciliana": "A3-Brunetti/images/Casata.jpg",
-  "Choc Berry Slice": "A3-Brunetti/images/Choc-berry-slice.jpg",
-  "Chocolate Mousse Cake": "A3-Brunetti/images/Chocolate-Mousse-Cake.jpg",
+  "Biscoff Gelato Cake": "/A3-Brunetti/images/Biscoff-Gelato-Cake.jpg",
+  "Black Forest": "/A3-Brunetti/images/Black-Forest.jpg",
+  "Bombe Alaska Gelato Cake": "/A3-Brunetti/images/Bombe-Alaska.jpg",
+  "Brunetti Classico Rocher": "/A3-Brunetti/images/Brunetti-Rocher.jpg",
+  "Cassata Siciliana": "/A3-Brunetti/images/Casata.jpg",
+  "Choc Berry Slice": "/A3-Brunetti/images/Choc-berry-slice.jpg",
+  "Chocolate Mousse Cake": "/A3-Brunetti/images/Chocolate-Mousse-Cake.jpg",
 };
 
 const suggestions = [
