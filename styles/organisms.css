@@ -531,6 +531,10 @@ display: flex;
 flex-direction: row;
 }
 
+.input--fit {
+  width: 39%;
+}
+
 .pickup-details {
   background-color: var(--primary-accent-colour);
   padding: var(--space-lg);
