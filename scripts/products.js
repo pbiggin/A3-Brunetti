@@ -4,7 +4,7 @@ const products = [
     name: "Biscoff Gelato Cake",
     type: "gelato",
     price: "$69.00",
-    image: "/images/Biscoff-Gelato-Cake.jpg",
+    image: "../images/Biscoff-Gelato-Cake.jpg",
     link: "../sites/cake-pages/biscoff.html",
     halal: false,
     glutenFriendly: false,
@@ -397,13 +397,13 @@ const products = [
 ];
 
 const productImages = {
-  "Biscoff Gelato Cake": "images/Biscoff-Gelato-Cake.jpg",
-  "Black Forest": "images/Black-Forest.jpg",
-  "Bombe Alaska Gelato Cake": "images/Bombe-alaska.jpg",
-  "Brunetti Classico Rocher": "images/Brunetti-rocher.jpg",
-  "Cassata Siciliana": "images/Casata.jpg",
-  "Choc Berry Slice": "images/Choc-berry-slice.jpg",
-  "Chocolate Mousse Cake": "images/Chocolate-Mousse-Cake.jpg",
+  "Biscoff Gelato Cake": "../images/Biscoff-Gelato-Cake.jpg",
+  "Black Forest": "../images/Black-Forest.jpg",
+  "Bombe Alaska Gelato Cake": "../images/Bombe-alaska.jpg",
+  "Brunetti Classico Rocher": "../images/Brunetti-rocher.jpg",
+  "Cassata Siciliana": "../images/Casata.jpg",
+  "Choc Berry Slice": "../images/Choc-berry-slice.jpg",
+  "Chocolate Mousse Cake": "../images/Chocolate-Mousse-Cake.jpg",
 };
 
 const suggestions = [
