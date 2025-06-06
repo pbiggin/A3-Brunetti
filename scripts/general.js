@@ -91,7 +91,7 @@ function initializeCart() {
       name: productName,
       price: productPrice,
       portion: portionSize,
-      image: productImages[productName] || "/images/placeholder.webp",
+      image: productImages[productName] || "../images/placeholder.webp",
     };
 
     cart.push(cartItem);
