@@ -398,7 +398,7 @@ const products = [
 ];
 
 const productImages = {
-  "Biscoff Gelato Cake": "https://pbiggin.github.io/A3-Brunetti/images/Biscoff-Gelato-Cake.jpg",
+  "Biscoff Gelato Cake": "../image/Biscoff-Gelato-Cake.jpg",
   "Black Forest": "../images/Black-Forest.jpg",
   "Bombe Alaska Gelato Cake": "../images/Bombe-Alaska.jpg",
   "Brunetti Classico Rocher": "..images/Brunetti-Rocher.jpg",
