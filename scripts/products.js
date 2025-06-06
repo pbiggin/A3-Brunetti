@@ -402,12 +402,12 @@ const products = [
 
 const productImages = {
   "Biscoff Gelato Cake": "/images/Biscoff-Gelato-Cake.jpg",
-  "Black Forest": "../images/Black-Forest.jpg",
-  "Bombe Alaska Gelato Cake": "../images/Bombe-alaska.jpg",
-  "Brunetti Classico Rocher": "../images/Brunetti-rocher.jpg",
-  "Cassata Siciliana": "../images/Casata.jpg",
-  "Choc Berry Slice": "../images/Choc-berry-slice.jpg",
-  "Chocolate Mousse Cake": "../images/Chocolate-Mousse-Cake.jpg",
+  "Black Forest": "/images/Black-Forest.jpg",
+  "Bombe Alaska Gelato Cake": "/images/Bombe-alaska.jpg",
+  "Brunetti Classico Rocher": "/images/Brunetti-rocher.jpg",
+  "Cassata Siciliana": "/images/Casata.jpg",
+  "Choc Berry Slice": "/images/Choc-berry-slice.jpg",
+  "Chocolate Mousse Cake": "/images/Chocolate-Mousse-Cake.jpg",
 };
 
 const suggestions = [
@@ -451,27 +451,27 @@ const suggestions = [
 const alternatives = [
   {
     name: "Chocolate Mud Cake",
-    image: "../../images/Mudcake.jpg",
-    link: "../../sites/product-page.html",
+    image: "../images/Mudcake.jpg",
+    link: "../sites/product-page.html",
   },
   {
     name: "Cookies & Cream Cheesecake",
-    image: "../../images/cookies-cream.jpg",
-    link: "../../sites/product-page.html",
+    image: "../images/cookies-cream.jpg",
+    link: "../sites/product-page.html",
   },
   {
     name: "Mixed Berry Charlotte",
-    image: "../../images/Mixed-Berry-Charlotte.jpg",
-    link: "../../sites/product-page.html",
+    image: "../images/Mixed-Berry-Charlotte.jpg",
+    link: "../sites/product-page.html",
   },
   {
     name: "New York Cheesecake",
-    image: "../../images/New-York-Cheesecake.jpg",
-    link: "../../sites/product-page.html",
+    image: "../images/New-York-Cheesecake.jpg",
+    link: "../sites/product-page.html",
   },
   {
     name: "Strawberry Cheesecake Gelato Cake",
-    image: "../../images/Strawberry-Gelato-Cheesecake.jpg",
-    link: "../../sites/product-page.html",
+    image: "../images/Strawberry-Gelato-Cheesecake.jpg",
+    link: "../sites/product-page.html",
   },
 ];
