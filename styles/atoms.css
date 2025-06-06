@@ -186,7 +186,7 @@ svg {
 /** Adobe SVG Generated Styles **/
 .st0 {
   fill: none;
-  stroke: #231f20;
+  stroke: var(--dominant-colour);
   stroke-linecap: round;
   stroke-miterlimit: 10;
 }

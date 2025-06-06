@@ -1,89 +1,87 @@
 /** general **/
 
-  .standard-btn:hover {
-    background-color: var(--primary-accent-colour);
-  }
+.standard-btn:hover {
+  background-color: var(--primary-accent-colour);
+}
 
-  .standard-btn--alternate:hover {
-    background-color: var(--secondary-accent-colour);
-    color: var(--secondary-colour);
-  }
+.standard-btn--alternate:hover {
+  background-color: var(--secondary-accent-colour);
+  color: var(--secondary-colour);
+}
 
-/** specific **/ 
+/** specific **/
 .shop__filters label:hover {
-    background-color: var(--primary-accent-colour);
-    color: var(--primary-colour);
-    cursor: pointer;
-  }
-  
-  .shop__filters input[type="checkbox"]:checked + label {
-    background-color: var(--primary-accent-colour);
-    color: var(--primary-colour);
-    cursor: pointer;
-  }
-  
-  #apply-filters:hover {
-    background-color: var(--secondary-accent-colour);
-    color: var(--secondary-colour);
-  }
+  background-color: var(--primary-accent-colour);
+  color: var(--primary-colour);
+  cursor: pointer;
+}
 
-  #clear-filters:hover {
-    background-color: var(--primary-accent-colour);
-  }
-  
-  #toggle-filters:hover {
-    background-color: var(--secondary-accent-colour);
-  }
-  
-  .info-box__tab:hover {
-    background-color: var(--primary-accent-colour);
-  }
-  
-  .info-box__tab.active {
-    background-color: var(--secondary-accent-colour);
+.shop__filters input[type="checkbox"]:checked + label {
+  background-color: var(--primary-accent-colour);
+  color: var(--primary-colour);
+  cursor: pointer;
+}
 
-  }
-  
+#apply-filters:hover {
+  background-color: var(--secondary-accent-colour);
+  color: var(--secondary-colour);
+}
 
-  a > img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease, filter 0.3s ease; 
-  }
-  
-  .slide-in-left,
-  .slide-in-right {
-    transform: translateX(-20%);
-    position: relative;
-    will-change: transform;
-  }
-  
-  .slide-in-left.active {
-    animation: slideInFromLeft 0.8s ease-out forwards; 
-  }
-  
-  .slide-in-right.active {
-    animation: slideInFromRight 0.8s ease-in forwards; 
-  }
-  
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-30%);
-    }
-    to {
-      transform: translateX(-10);
-    }
-  }
-  
-  @keyframes slideInFromRight {
-    from {
-      transform: translateX(30%);
-    }
-    to {
-      transform: translateX(10);
-    }
-  }
+#clear-filters:hover {
+  background-color: var(--primary-accent-colour);
+}
 
-  /* Fade-in animation */
+#toggle-filters:hover {
+  background-color: var(--secondary-accent-colour);
+}
+
+.info-box__tab:hover {
+  background-color: var(--primary-accent-colour);
+}
+
+.info-box__tab.active {
+  background-color: var(--secondary-accent-colour);
+}
+
+a > img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.slide-in-left,
+.slide-in-right {
+  transform: translateX(-20%);
+  position: relative;
+  will-change: transform;
+}
+
+.slide-in-left.active {
+  animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right.active {
+  animation: slideInFromRight 0.8s ease-in forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-30%);
+  }
+  to {
+    transform: translateX(-10);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(30%);
+  }
+  to {
+    transform: translateX(10);
+  }
+}
+
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -94,11 +92,11 @@
 }
 
 .product-image {
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.8s ease-in;
 }
 
 .product-image.loaded {
-  animation: fadeIn 0.8s ease-in forwards; 
-  opacity: 1; 
+  animation: fadeIn 0.8s ease-in forwards;
+  opacity: 1;
 }

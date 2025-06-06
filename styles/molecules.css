@@ -34,11 +34,12 @@ a.standard-btn--alternate {
   text-align: center;
   background-color: white;
   border-radius: 60rem;
+  color: var(--secondary-colour);
 }
 
 .standard-input {
   border: solid var(--border-standard) var(--dominant-colour);
-  color: var(--dominant-colour);
+  color: var(--secondary-colour);
 }
 
 .borderless-input {
