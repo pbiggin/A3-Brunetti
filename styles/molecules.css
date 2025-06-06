@@ -366,13 +366,13 @@ a.standard-btn--alternate {
 /** filter function **/
 .shop__filters {
   display: grid;
-  justify-content: flex-end; /* Align buttons to the right */
-  gap: var(--space-sm); /* Add spacing between buttons */
+  justify-content: flex-end;
+  gap: var(--space-sm);
 }
 
 .filter__buttons {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: var(--space-sm);
 }
@@ -383,6 +383,14 @@ a.standard-btn--alternate {
   gap: var(--space-sm);
   margin: 0;
   padding: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease;
+}
+
+.shop__filters fieldset.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .shop__filters label {
@@ -394,6 +402,7 @@ a.standard-btn--alternate {
   padding: var(--space-sm);
   border: solid var(--border-standard);
   border-radius: 30px;
+  transition: background-color 0.3s ease;
 }
 
 .shop__filters input[type="checkbox"] {
@@ -424,7 +433,7 @@ a.standard-btn--alternate {
   background-color: white;
   border: solid var(--border-standard) var(--secondary-colour);
   color: var(--secondary-colour);
-  margin-left: auto; 
+  margin-left: auto;
 }
 
 @media all and (max-width: 600px) {
@@ -467,8 +476,8 @@ a.standard-btn--alternate {
 }
 
 @media all and (max-width: 600px) {
-
-  #item__image > img, .item__thumbnail > img {
+  #item__image > img,
+  .item__thumbnail > img {
     height: 100%;
   }
 
@@ -606,10 +615,9 @@ a.standard-btn--alternate {
   border-radius: 30px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-    margin: var(--space-xl);
-    padding: var(--space-md);
+  margin: var(--space-xl);
+  padding: var(--space-md);
 }
-
 
 /** generated with copilot **/
 
@@ -635,7 +643,6 @@ a.standard-btn--alternate {
     max-width: 100%; /* Ensure the image scales properly */
     height: auto;
   }
-
 }
 
 .direction-image {

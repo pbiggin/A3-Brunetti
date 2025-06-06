@@ -15,7 +15,9 @@ function createProductElement(product) {
   `;
 
   const productImage = productDiv.querySelector(".product-image");
-  productImage.addEventListener("load", () => productImage.classList.add("loaded"));
+  productImage.addEventListener("load", () =>
+    productImage.classList.add("loaded")
+  );
   if (productImage.complete) productImage.classList.add("loaded");
 
   return productDiv;
@@ -27,7 +29,9 @@ function loadProducts() {
   const end = start + productsPerPage;
   const productsToLoad = products.slice(start, end);
 
-  productsToLoad.forEach((product) => productList.appendChild(createProductElement(product)));
+  productsToLoad.forEach((product) =>
+    productList.appendChild(createProductElement(product))
+  );
 
   currentPage++;
   if (currentPage * productsPerPage >= products.length) {
@@ -37,21 +41,28 @@ function loadProducts() {
 }
 
 function applyFilters() {
-  const selectedType = document.querySelector('input[name="product-type"]:checked')?.value;
-  const halalSelected = document.querySelector('input[name="halal"]:checked') !== null;
-  const glutenFriendlySelected = document.querySelector('input[name="glutenFriendly"]:checked') !== null;
+  const selectedType = document.querySelector(
+    'input[name="product-type"]:checked'
+  )?.value;
+  const halalSelected =
+    document.querySelector('input[name="halal"]:checked') !== null;
+  const glutenFriendlySelected =
+    document.querySelector('input[name="glutenFriendly"]:checked') !== null;
 
   return products.filter((product) => {
     const matchesType = !selectedType || product.type === selectedType;
     const matchesHalal = !halalSelected || product.halal === true;
-    const matchesGlutenFriendly = !glutenFriendlySelected || product.glutenFriendly === true;
+    const matchesGlutenFriendly =
+      !glutenFriendlySelected || product.glutenFriendly === true;
     return matchesType && matchesHalal && matchesGlutenFriendly;
   });
 }
 
 function renderProducts(productList, productArray) {
   productList.innerHTML = "";
-  productArray.forEach((product) => productList.appendChild(createProductElement(product)));
+  productArray.forEach((product) =>
+    productList.appendChild(createProductElement(product))
+  );
 }
 
 document.getElementById("load-more").addEventListener("click", () => {
@@ -65,7 +76,9 @@ document.getElementById("apply-filters").addEventListener("click", () => {
 });
 
 document.getElementById("clear-filters").addEventListener("click", () => {
-  document.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => (checkbox.checked = false));
+  document
+    .querySelectorAll('input[type="checkbox"]')
+    .forEach((checkbox) => (checkbox.checked = false));
   const productList = document.getElementById("product-list");
   renderProducts(productList, products);
 });
@@ -76,3 +89,13 @@ document.getElementById("toggle-filters").addEventListener("click", () => {
 
 loadProducts();
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleFiltersButton = document.getElementById("toggle-filters");
+  const filtersFieldset = document.querySelector(".shop__filters fieldset");
+
+  if (toggleFiltersButton && filtersFieldset) {
+    toggleFiltersButton.addEventListener("click", () => {
+      filtersFieldset.classList.toggle("visible"); // Toggle the 'visible' class
+    });
+  }
+});
