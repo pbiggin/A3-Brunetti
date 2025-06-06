@@ -15,7 +15,8 @@ function initializeCart() {
   const cartTotal = document.getElementById("cart-total");
   const orderButton = document.querySelector(".standard-btn.center.headspace");
 
-  if (!cartButton || !cartContainer || !cartItems || !cartTotal || !orderButton) return;
+  if (!cartButton || !cartContainer || !cartItems || !cartTotal || !orderButton)
+    return;
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -29,7 +30,9 @@ function initializeCart() {
         li.classList.add("cart--preview", "cart-item");
 
         li.innerHTML = `
-          <img src="${item.image}" alt="${item.name}" class="cart--preview cart-item-image" />
+          <img src="${item.image}" alt="${
+          item.name
+        }" class="cart--preview cart-item-image" />
           <div class="cart-item-details">
             <strong><p>${item.name}</p></strong>
             <p>${item.portion}</p>
@@ -109,9 +112,15 @@ function initializeCart() {
     }, 2000);
   });
 
-  cartButton.addEventListener("mouseenter", () => cartContainer.classList.remove("hidden"));
-  cartContainer.addEventListener("mouseenter", () => cartContainer.classList.remove("hidden"));
-  cartContainer.addEventListener("mouseleave", () => cartContainer.classList.add("hidden"));
+  cartButton.addEventListener("mouseenter", () =>
+    cartContainer.classList.remove("hidden")
+  );
+  cartContainer.addEventListener("mouseenter", () =>
+    cartContainer.classList.remove("hidden")
+  );
+  cartContainer.addEventListener("mouseleave", () =>
+    cartContainer.classList.add("hidden")
+  );
 }
 
 function initializeProductScroll() {
@@ -123,10 +132,18 @@ function initializeProductScroll() {
   const links = container.querySelectorAll("a");
   container.style.left = "0px";
 
-  let pressed = false, startX, x, isDragging = false, velocity = 0, lastX = 0, momentumFrame;
+  let pressed = false,
+    startX,
+    x,
+    isDragging = false,
+    velocity = 0,
+    lastX = 0,
+    momentumFrame;
 
-  const disablePointerEvents = () => links.forEach(link => link.style.pointerEvents = "none");
-  const enablePointerEvents = () => links.forEach(link => link.style.pointerEvents = "auto");
+  const disablePointerEvents = () =>
+    links.forEach((link) => (link.style.pointerEvents = "none"));
+  const enablePointerEvents = () =>
+    links.forEach((link) => (link.style.pointerEvents = "auto"));
 
   const boundItems = () => {
     const outerWidth = outerContainer.offsetWidth;
@@ -144,7 +161,9 @@ function initializeProductScroll() {
 
   const applyMomentum = () => {
     if (Math.abs(velocity) > 0.1) {
-      container.style.left = `${parseInt(container.style.left, 10) + velocity}px`;
+      container.style.left = `${
+        parseInt(container.style.left, 10) + velocity
+      }px`;
       velocity *= 0.95;
       boundItems();
       momentumFrame = requestAnimationFrame(applyMomentum);
@@ -195,7 +214,9 @@ function initializeOverlayToggle() {
 
   if (!overlay || !hamburgerButton) return;
 
-  hamburgerButton.addEventListener("click", () => overlay.classList.toggle("hidden"));
+  hamburgerButton.addEventListener("click", () =>
+    overlay.classList.toggle("hidden")
+  );
 }
 
 function initializeCartSummary() {
@@ -252,7 +273,9 @@ function initializeCartSummary() {
 }
 
 function initializeSlidingAnimations() {
-  const slidingElements = document.querySelectorAll(".slide-in-left, .slide-in-right");
+  const slidingElements = document.querySelectorAll(
+    ".slide-in-left, .slide-in-right"
+  );
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -266,9 +289,8 @@ function initializeSlidingAnimations() {
         }
       });
     },
-    { threshold: 0.10 }
+    { threshold: 0.1 }
   );
 
   slidingElements.forEach((element) => observer.observe(element));
 }
-

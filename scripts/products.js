@@ -397,7 +397,7 @@ const products = [
   },
 ];
 
-const productimages = {
+const productImages = {
   "Biscoff Gelato Cake": "images/Biscoff-Gelato-Cake.jpg",
   "Black Forest": "images/Black-Forest.jpg",
   "Bombe Alaska Gelato Cake": "images/Bombe-Alaska.jpg",
