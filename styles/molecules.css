@@ -19,7 +19,7 @@
   color: var(--dominant-colour);
 }
 
-.standard-btn--alternate {
+a.standard-btn--alternate {
   border: none;
   background-color: var(--secondary-colour);
   color: var(--secondary-accent-colour);
