@@ -4,7 +4,7 @@ const products = [
     name: "Biscoff Gelato Cake",
     type: "gelato",
     price: "$69.00",
-    image: "../images/Biscoff-Gelato-Cake.jpg",
+    image: "/images/Biscoff-Gelato-Cake.jpg",
     link: "../sites/cake-pages/biscoff.html",
     halal: false,
     glutenFriendly: false,
