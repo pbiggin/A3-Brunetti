@@ -125,8 +125,10 @@ a.standard-btn--alternate {
 
 .hamburger {
   z-index: var(--navigation);
+  fill: var(--secondary-colour);
   display: none;
   border: none;
+  background-color: transparent;
 }
 
 @media all and (max-width: 600px) {
