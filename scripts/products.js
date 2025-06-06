@@ -1,4 +1,8 @@
+
 // used github copilot here to assist with creating this feature //
+
+const basePath = window.location.origin + window.location.pathname.replace(/\/[^/]*$/, "/");
+
 const products = [
   {
     name: "Biscoff Gelato Cake",
@@ -397,13 +401,13 @@ const products = [
 ];
 
 const productImages = {
-  "Biscoff Gelato Cake": "../images/Biscoff-Gelato-Cake.jpg",
-  "Black Forest": "../images/Black-Forest.jpg",
-  "Bombe Alaska Gelato Cake": "../images/Bombe-alaska.jpg",
-  "Brunetti Classico Rocher": "../images/Brunetti-rocher.jpg",
-  "Cassata Siciliana": "../images/Casata.jpg",
-  "Choc Berry Slice": "../images/Choc-berry-slice.jpg",
-  "Chocolate Mousse Cake": "../images/Chocolate-Mousse-Cake.jpg",
+  "Biscoff Gelato Cake": `${basePath}images/Biscoff-Gelato-Cake.jpg`,
+  "Black Forest": `${basePath}images/Black-Forest.jpg`,
+  "Bombe Alaska Gelato Cake": `${basePath}images/Bombe-alaska.jpg`,
+  "Brunetti Classico Rocher": `${basePath}images/Brunetti-rocher.jpg`,
+  "Cassata Siciliana": `${basePath}images/Casata.jpg`,
+  "Choc Berry Slice": `${basePath}images/Choc-berry-slice.jpg`,
+  "Chocolate Mousse Cake": `${basePath}images/Chocolate-Mousse-Cake.jpg`,
 };
 
 const suggestions = [
