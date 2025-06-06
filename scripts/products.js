@@ -26,7 +26,7 @@ const products = [
     price: "$69.00",
     image: "../images/Bombe-Alaska.jpg",
     link: "../sites/cake-pages/bombe-alaska.html",
-    halal: false,
+    halal: true,
     glutenFriendly: false,
     vegan: false,
   },
@@ -34,7 +34,7 @@ const products = [
     name: "Brunetti Classico Rocher",
     type: "premium",
     price: "From: $57.00",
-    image: "../images/Chocolate-Mousse.jpg",
+    image: "../images/Brunetti-Rocher.jpg",
     link: "../sites/cake-pages/brunetti-rocher.html",
     halal: true,
     glutenFriendly: true,
@@ -60,6 +60,17 @@ const products = [
     halal: false,
     glutenFriendly: false,
     vegan: true,
+  },
+
+  {
+    name: "Chocolate Mousse",
+    type: "premium",
+    price: "From: $57.00",
+    image: "../images/Chocolate-Mousse.jpg",
+    link: "../sites/cake-pages/product-page.html",
+    halal: true,
+    glutenFriendly: true,
+    vegan: false,
   },
 
   {
