@@ -22,9 +22,6 @@ body {
   gap: var(--space-sm);
 }
 
-.services > .content__text { 
-  max-width: 50%;
-}
 
 /** announcements **/
 .announcement {
