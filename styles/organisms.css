@@ -198,6 +198,11 @@ body {
   background-color: var(--secondary-accent-colour);
   color: var(--secondary-colour);
   overflow: hidden;
+  
+}
+
+.services > .content__text { 
+  max-width: 50%;
 }
 
 .services--alternate {
@@ -214,6 +219,11 @@ body {
   .services--default {
     flex-direction: column-reverse;
   }
+
+  .services > .content__text { 
+    max-width: 100%;
+  }
+  
 }
 
 /** product list structure **/
